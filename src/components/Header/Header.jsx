@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import { ReactComponent as PhoneIcon } from '../../svg/phone.svg'
 import { ReactComponent as TelegramIcon } from '../../svg/telegram.svg'
@@ -12,9 +13,9 @@ export default function Header() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div className={'header__contacts'}>
                 <div className={'header__contacts-logo'}>
-                    <a href="https://frostyx-vk.github.io/sibgau/">
+                    <Link to='/'>
                         <img src={logo} alt="image" />
-                    </a>
+                    </Link>
                 </div>
                 <div className={'header__contacts-block'}>
                     <div className={'header__contacts-tel'}>
@@ -26,7 +27,7 @@ export default function Header() {
                     <div className={'header__contacts-telegram'}>
                         <a href="https://t.me/fro_styx" className={'contact'}>
                             <TelegramIcon />
-                            Telegram
+                            t.me/northen
                         </a>
                     </div>
                     <button className={'header__contacts-btn'}>Переключить режим</button>

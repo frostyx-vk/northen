@@ -1,15 +1,26 @@
 import React from 'react'
 import './Nav.css'
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
     return (
         <div>
             <ul className={"header__nav-list"}>
-                <li><a href="javascript: void(0)">О нас</a></li>
-                <li><a href="javascript: void(0)">Цены</a></li>
-                <li><a href="javascript: void(0)">Партнёрам</a></li>
-                <li><a href="javascript: void(0)">Контакты</a></li>
-                <li><a href="https://github.com/frostyx-vk/northen">Repository</a></li>
+                <Link to='/about'>
+                    О нас
+                </Link>
+                <Link to='/prices'>
+                    Цены
+                </Link>
+                <Link to='/partners'>
+                    Партнёрам
+                </Link>
+                <Link to='/contacts'>
+                    Контакты
+                </Link>
+                <Link to='https://github.com/frostyx-vk/northen'>
+                    Repository
+                </Link>
             </ul>
         </div>
     )

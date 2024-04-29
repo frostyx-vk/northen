@@ -9,5 +9,5 @@
     font-family: Montserrat;
 }
 .header__nav-list a:hover {
-    text-decoration: underline;
+    color: #23a6ff;
 }
