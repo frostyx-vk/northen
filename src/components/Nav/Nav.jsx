@@ -9,6 +9,7 @@ export default function Nav() {
                 <li><a href="javascript: void(0)">Цены</a></li>
                 <li><a href="javascript: void(0)">Партнёрам</a></li>
                 <li><a href="javascript: void(0)">Контакты</a></li>
+                <li><a href="https://github.com/frostyx-vk/northen">Repository</a></li>
             </ul>
         </div>
     )

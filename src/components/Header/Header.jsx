@@ -34,7 +34,7 @@ export default function Header() {
             </div>
             <Nav />
             <div className={'header__order'}>
-                <button class={'header-modalbtn'}>
+                <button className={'header-modalbtn'}>
                     Заказать<br />
                     проект
                 </button>
