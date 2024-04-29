@@ -10,6 +10,7 @@ import Partners from './pages/Partners/Partners';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import Prices from './pages/Prices/Prices';
 import About from './pages/About/About';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -25,6 +26,7 @@ root.render(
         <Route path='/prices' element={ <Prices />} />
         <Route path='/partners' element={ <Partners />} />
         <Route path='/contacts' element={ <Contacts />} />
+        <Route path='*' element={ <NotFoundPage />} />
       </Routes>
       <Footer />
     </React.StrictMode>
