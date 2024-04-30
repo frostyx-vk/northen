@@ -1,0 +1,106 @@
+.content-solution__right-block {
+    margin-top: 126px;
+    min-width: 608px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.content-solution__web-block, .content-solution__develop-block {
+    width: 700px;
+}
+
+.content-solution__web-block h2 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.content-solution__web-block ul {
+    list-style: none;
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding-left: 0;
+}
+
+.content-solution__web-block ul li a {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.content-solution__web-link {
+    cursor: pointer;
+}
+
+.content-solution__develop-background {
+    position: relative;
+}
+
+.content-solution__develop-background img {
+    position: absolute;
+    left: -840px;
+    top: -200px;
+    z-index: -1;
+}
+
+.content-solution__develop-tabs {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 66px;
+    align-items: center;
+    margin-left: -36px;
+}
+
+.content-solution__develop-tabs button {
+    border: none;
+    background: transparent;
+    color: #B0DDEE;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    cursor: pointer;
+    width: 212px;
+    display: block;
+    text-align: center;
+}
+
+.content-solution__develop-text {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 50px;
+    word-wrap: break-word;
+}
+
+.content-solution__develop-text p {
+    margin: 0;
+}
+
+.is-active {
+    stroke-width: 1px;
+    stroke: #FFF;
+    background: url(../../svg/frame.svg) no-repeat !important;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 212px;
+    height: 65px;
+}
