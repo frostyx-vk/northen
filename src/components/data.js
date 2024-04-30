@@ -200,16 +200,39 @@ export const dataSpecialization = [
     {
         title: 'WEB',
         description: 'Сайты, интернет-магазины, маркетплейсы. Интеграции с сервисами и шинами данных (ERP, 1С и пр.)',
-        img: 'https://i.postimg.cc/15NDpPmZ/specialization3.png',
+        img: 'https://i.postimg.cc/wM1L4YDL/specialization2.png',
     },
     {
         title: 'Ретейнер',
         description: 'Мы можем усилить выделенной с нашей стороны командой штат заказчика в любом стеке – backend, fronted, тестирование, аналитика.',
-        img: 'https://ibb.co/sj5fKyr',
+        img: 'https://i.postimg.cc/15NDpPmZ/specialization3.png',
     },
     {
         title: 'Поддержка',
         description: 'Сопровождаем и поддерживаем проекты.',
         img: 'https://i.postimg.cc/sgYSNcG6/specialization4.png',
+    },
+]
+
+export const dataTechnology = [
+    {
+        title: 'Python',
+        img: 'https://i.postimg.cc/5yzDz0nR/ph.png',
+    },
+    {
+        title: 'Django',
+        img: 'https://i.postimg.cc/02pL2z66/dj.png',
+    },
+    {
+        title: 'JS',
+        img: 'https://i.postimg.cc/CxS9ZwDc/js.png',
+    },
+    {
+        title: 'Vue',
+        img: 'https://i.postimg.cc/Xvvh8xsF/vu.png',
+    },
+    {
+        title: 'CSS',
+        img: 'https://i.postimg.cc/2y5VjsGy/css.png',
     },
 ]

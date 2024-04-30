@@ -3,6 +3,7 @@ import Statistic from './../../components/Statistic/Statistic'
 import './About.css'
 import aboutLogo from '../../illustration/aboutLogo.png'
 import { dataSpecialization } from './../../components/data'
+import { dataTechnology } from './../../components/data'
 
 export default function About() {
     return (
@@ -31,6 +32,19 @@ export default function About() {
                                 </div>
                             })}
                         </div>
+                    </div>
+                </div>
+                <div className="about-technology">
+                    <h3>Наши технологии</h3>
+                    <div className="about-technology__items">
+                        {
+                            dataTechnology.map((data, i) => {
+                                return <div key={i} className="about-technology__item">
+                                    <img src={data.img} alt="image" width={120} height={120} />
+                                    <p>{data.title}</p>
+                                </div>
+                            })
+                        }
                     </div>
                 </div>
             </div>
