@@ -236,3 +236,10 @@ export const dataTechnology = [
         img: 'https://i.postimg.cc/2y5VjsGy/css.png',
     },
 ]
+export const dataAboutApplications = [
+    {
+        title: 'Хотите пригласить нас в тендер?',
+        descr: 'С удовольствием выслушаем все предложения и подготовим документы!',
+        nameBtn: 'Оставить заявку',
+    },
+]

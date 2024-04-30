@@ -1,0 +1,99 @@
+.content-relation {
+    margin-top: 130px;
+    height: 386px;
+    background: #233b59;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.content-relation h2 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.content-relation p {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.content-trust__button-svg-adapt {
+    display: none;
+}
+
+.content-trust__button-block {
+    width: 440px;
+    height: 114px;
+    bottom: -68px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.content-trust__button-shadowleft {
+    position: absolute;
+    bottom: -2px;
+    left: -34px;
+}
+
+.content-trust__button-shadowright {
+    position: absolute;
+    bottom: -2px;
+    right: -34px;
+}
+
+.content-trust__button {
+    position: relative;
+}
+
+.content-trust__button h2 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-family: Montserrat !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+}
+
+.content-trust__button-svg,
+.content-trust__button-svg-adapt {
+    cursor: pointer;
+}
+
+.content-relation__button_name{
+    color: #FFF !important;
+    text-align: center !important;
+    font-family: Montserrat !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+}
+
+.content-trust__button-shadowright{
+    position: absolute;
+    bottom: -2px;
+    right: -34px;
+}

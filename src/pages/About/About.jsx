@@ -1,9 +1,9 @@
 import React from 'react'
 import Statistic from './../../components/Statistic/Statistic'
+import Application from './../../components/Application/Application'
 import './About.css'
 import aboutLogo from '../../illustration/aboutLogo.png'
-import { dataSpecialization } from './../../components/data'
-import { dataTechnology } from './../../components/data'
+import { dataSpecialization, dataTechnology, dataAboutApplications } from './../../components/data'
 
 export default function About() {
     return (
@@ -48,6 +48,11 @@ export default function About() {
                     </div>
                 </div>
             </div>
+            {
+                dataAboutApplications.map((data, i) => {
+                    return <Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} />
+                })
+            }
         </main>
     )
 }
