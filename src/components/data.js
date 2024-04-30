@@ -244,6 +244,13 @@ export const dataAboutApplications = [
         nameBtn: 'Оставить заявку',
     },
 ]
+export const dataContactsApplications = [
+    {
+        title: 'Напишите нам',
+        descr: 'Поможем реализовать Вашу идею!',
+        nameBtn: 'Написать нам :)',
+    },
+]
 
 export const dataPrices = [
     {
