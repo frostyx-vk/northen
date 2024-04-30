@@ -1,0 +1,58 @@
+.content-statistics{
+    margin-top: 46px;
+    display: flex;
+    justify-content: space-between;
+}
+.content-statistics__company-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.content-statistics__company-text{
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+}
+.content-statistics__left{
+    background: url(../../illustration/first_circle.png), no-repeat;
+    width: 430px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat:no-repeat;
+}
+.content-statistics__middle{
+    background: url(../../illustration/second_circle.png), no-repeat;
+    width: 380px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat:no-repeat;
+    position: relative;
+}
+.middle{
+    position: absolute;
+    right: 116px;
+}
+.content-statistics__right{
+    background: url(../../illustration/third_circle.png), no-repeat;
+    width: 430px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat:no-repeat;
+}
+.content-statistics__company-number{
+    font-size: 200px;
+    background: -webkit-linear-gradient(#a8cddc, #008aa1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
