@@ -12,8 +12,8 @@ export default function Prices() {
                         dataPrices.map((data, i) => {
                             return <div className="prices-content">
                                 <div key={i} className="prices-content__main">
-                                    <h2>{data.title}</h2>
                                     <div className="prices-content__description">
+                                        <h2>{data.title}</h2>
                                         <p>{data.descr}</p>
                                         <ul>
                                             {data.list.map((item, i) => {

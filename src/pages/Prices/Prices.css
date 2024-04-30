@@ -100,3 +100,11 @@
 .link-requisition svg {
     position: absolute;
 }
+
+.prices-content__main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    justify-content: space-between;
+}
