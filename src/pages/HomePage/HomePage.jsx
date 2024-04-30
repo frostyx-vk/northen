@@ -30,7 +30,7 @@ export default function HomePage() {
                         </ul>
                     </div>
                     <div className="content-solution__develop-block">
-                        <div style={{height: '250px'}}>
+                        <div style={{ height: '250px' }}>
                             <div className="content-solution__develop-tabs">
                                 <button className={content === 'dev' ? 'is-active' : null} onClick={() => handleClick('dev')}>
                                     Разработка
