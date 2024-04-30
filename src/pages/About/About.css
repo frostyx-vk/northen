@@ -1,0 +1,76 @@
+.about-title {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 530px;
+    margin-left: 200px;
+    margin-top: 83px;
+}
+
+.about-title__img {
+    display: flex;
+    justify-content: center;
+}
+
+.about-specialization {
+    display: flex;
+    justify-content: center;
+    margin-top: 159px;
+}
+
+.about-specialization__block h3 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 140px;
+}
+
+.about-specialization__items {
+    margin-top: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    justify-content: center;
+}
+
+.about-specialization__item {
+    width: 392px;
+    border-radius: 20px;
+    padding: 31px 35px 45px 53px;
+    background: linear-gradient(180deg, #233b59 0%, rgba(37, 178, 200, 0.00) 100%);
+}
+
+.about-specialization__item-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-specialization__item-title p {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 15px;
+    margin: 0;
+}
+
+.about-specialization__item-title img {
+    max-width: 72px;
+    max-height: 72px;
+}
+
+.about-specialization__item-description {
+    margin-top: 27px;
+}
+
+.about-specialization__item-description p {
+    font-family: Montserrat, sans-serif;
+}

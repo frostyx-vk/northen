@@ -190,3 +190,26 @@ export const dataPrivacy = [
         12.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу https://frostyx-vk.github.io/nothen/privacy/.`
     }
 ]
+
+export const dataSpecialization = [
+    {
+        title: 'Портальные решения',
+        description: 'Интранет-системы / b2b-проекты / личные кабинеты',
+        img: 'https://i.postimg.cc/Dzcr8g2J/specialization1.png',
+    },
+    {
+        title: 'WEB',
+        description: 'Сайты, интернет-магазины, маркетплейсы. Интеграции с сервисами и шинами данных (ERP, 1С и пр.)',
+        img: 'https://i.postimg.cc/15NDpPmZ/specialization3.png',
+    },
+    {
+        title: 'Ретейнер',
+        description: 'Мы можем усилить выделенной с нашей стороны командой штат заказчика в любом стеке – backend, fronted, тестирование, аналитика.',
+        img: 'https://ibb.co/sj5fKyr',
+    },
+    {
+        title: 'Поддержка',
+        description: 'Сопровождаем и поддерживаем проекты.',
+        img: 'https://i.postimg.cc/sgYSNcG6/specialization4.png',
+    },
+]
