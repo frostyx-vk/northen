@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/northen/static/css/main.5d5be699.css",
+    "main.js": "/northen/static/js/main.c8fd0aca.js",
+    "static/js/453.7953f966.chunk.js": "/northen/static/js/453.7953f966.chunk.js",
+    "static/media/rs.png": "/northen/static/media/rs.666d1a75fbdc5f342e77.png",
+    "static/media/ps.png": "/northen/static/media/ps.5b2b523e7b7a5cc8fe28.png",
+    "static/media/bp.png": "/northen/static/media/bp.968c06672eaa676d3b7e.png",
+    "static/media/Montserrat-Regular.woff2": "/northen/static/media/Montserrat-Regular.8b56391ed36ea95337c6.woff2",
+    "static/media/Montserrat-Bold.woff2": "/northen/static/media/Montserrat-Bold.cfceaf4e74789fc9df24.woff2",
+    "static/media/Montserrat-Medium.woff2": "/northen/static/media/Montserrat-Medium.d6bbb7c3c86aa8edcd0a.woff2",
+    "static/media/Montserrat-SemiBold.woff2": "/northen/static/media/Montserrat-SemiBold.1d679c8257a6a9caa9bd.woff2",
+    "static/media/Montserrat-Light.woff2": "/northen/static/media/Montserrat-Light.cf7b6a954e570df2f420.woff2",
+    "static/media/Montserrat-Thin.woff2": "/northen/static/media/Montserrat-Thin.5fa2688acb19e6dcac7a.woff2",
+    "static/media/order.png": "/northen/static/media/order.1095b279c6866bbd7ae4.png",
+    "static/media/gp.png": "/northen/static/media/gp.626a85e433b7d843c539.png",
+    "static/media/aboutLogo.png": "/northen/static/media/aboutLogo.43443b023056cc028776.png",
+    "static/media/footLog.png": "/northen/static/media/footLog.24e188e279c8781a6d21.png",
+    "static/media/rn.png": "/northen/static/media/rn.6e59435e25c8767f608a.png",
+    "static/media/logo.png": "/northen/static/media/logo.e84def60ccce70ea6115.png",
+    "static/media/third_circle.png": "/northen/static/media/third_circle.73699d415124205d054d.png",
+    "static/media/first_circle.png": "/northen/static/media/first_circle.05f54149d9401a65d393.png",
+    "static/media/second_circle.png": "/northen/static/media/second_circle.c1b1f85a622b70a57ac8.png",
+    "static/media/phone.svg": "/northen/static/media/phone.ab3488a54cb7c41132b65b24bcd0a422.svg",
+    "static/media/frame.svg": "/northen/static/media/frame.3d6accbf07181dbd0871.svg",
+    "static/media/telegram.svg": "/northen/static/media/telegram.a31600fd401412348753d63d183b92a4.svg",
+    "index.html": "/northen/index.html",
+    "static/media/arrow-r.svg": "/northen/static/media/arrow-r.8a7408203bc20987eb555a0ac9081aa2.svg",
+    "main.5d5be699.css.map": "/northen/static/css/main.5d5be699.css.map",
+    "main.c8fd0aca.js.map": "/northen/static/js/main.c8fd0aca.js.map",
+    "453.7953f966.chunk.js.map": "/northen/static/js/453.7953f966.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d5be699.css",
+    "static/js/main.c8fd0aca.js"
+  ]
+}
