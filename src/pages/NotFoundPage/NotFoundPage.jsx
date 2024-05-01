@@ -11,7 +11,7 @@ export default function NotFoundPage() {
         const intervalId = setInterval(() => {
             setTimeLeft(timeLeft - 1);
             if (timeLeft === 1) {
-                navigate('/');
+                navigate('/northen');
             };
         }, 1000);
         return () => clearInterval(intervalId);

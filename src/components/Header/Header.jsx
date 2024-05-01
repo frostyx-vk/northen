@@ -13,7 +13,7 @@ export default function Header() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div className={'header__contacts'}>
                 <div className={'header__contacts-logo'}>
-                    <Link to='/'>
+                    <Link to='/northen'>
                         <img src={logo} alt="image" />
                     </Link>
                 </div>
