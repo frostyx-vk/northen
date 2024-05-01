@@ -3,8 +3,24 @@ import './HomePage.css'
 import { ReactComponent as Arrow } from './../../svg/arrow-r.svg'
 import { dataWebSolutions, dataTabSolutions } from './../../components/data'
 
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { useSwiper } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+import rnLogo from '../../illustration/rn.png'
+import gpLogo from '../../illustration/gp.png'
+import rsLogo from '../../illustration/rs.png'
+import bpLogo from '../../illustration/bp.png'
+import psLogo from '../../illustration/ps.png'
+
 export default function HomePage() {
     const [content, setContent] = useState('dev');
+
+    const swiper = useSwiper();
 
     function handleClick(type) {
         setContent(type);
@@ -49,6 +65,69 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
-        </main>
+
+            <div className="content-relation relation-slider">
+                <div className="content-relation__title-block">
+                    <h2>Нам доверяют</h2>
+                    <p>Наши решения работают<br />
+                        в крупнейших компаниях России и мира:</p>
+                </div>
+                <Swiper
+                    modules={[Navigation, Scrollbar, A11y]}
+                    spaceBetween={50}
+                    slidesPerView={2}
+                    navigation
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')}
+                    loop={true}
+                >
+                    <SwiperSlide>
+                        <img src={rnLogo} alt="image" width={300} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={gpLogo} alt="image" width={300} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={rsLogo} alt="image" width={300} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={bpLogo} alt="image" width={300} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={psLogo} alt="image" width={300} />
+                    </SwiperSlide>
+
+                </Swiper>
+                <div className="content-trust__button-block">
+                    <div className="content-trust__button">
+                        <h2 className="content-relation__button_name">Стать Клиентом</h2>
+                        <svg className="content-trust__button-shadowleft" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                            <path opacity="0.3" fillRule="evenodd" clipRule="evenodd" d="M37.5651 64.1298L64.1304 37.5645L26.5651 0L-0.000236511 26.5645L37.5651 64.1298Z" fill="url(#paint0_linear_0_2560)"></path>
+                            <defs>
+                                <linearGradient id="paint0_linear_0_2560" x1="80.163" y1="48.0973" x2="48.0981" y2="80.1627" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#25B2E7"></stop>
+                                    <stop offset="1" stopColor="#25B2E7" stopOpacity="0.01"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg className="content-trust__button-svg-adapt" xmlns="http://www.w3.org/2000/svg" width="291" height="88" viewBox="0 0 291 88" fill="none">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M0 44L44.0725 88H246.927H247L246.949 87.9781L291 44L246.927 0H44.0725H44L44.0472 0.0253279L0 44Z" fill="#25B2E7"></path>
+                        </svg>
+                        <svg className="content-trust__button-svg" xmlns="http://www.w3.org/2000/svg" width="371" height="88" viewBox="0 0 371 88" fill="none">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M0 44L44.0725 88H326.927H327L326.945 87.9828L371 44L326.927 0H44.0725H44L44.0529 0.0195929L0 44Z" fill="#25B2E7"></path>
+                        </svg>
+                        <svg className="content-trust__button-shadowright" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                            <path opacity="0.3" fillRule="evenodd" clipRule="evenodd" d="M26.5653 64.1298L0 37.5645L37.5653 0L64.1306 26.5645L26.5653 64.1298Z" fill="url(#paint0_linear_0_2559)"></path>
+                            <defs>
+                                <linearGradient id="paint0_linear_0_2559" x1="-16.0327" y1="48.0973" x2="16.0322" y2="80.1627" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#25B2E7"></stop>
+                                    <stop offset="1" stopColor="#25B2E7" stopOpacity="0.01"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main >
     )
 }
