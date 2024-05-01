@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ReactComponent as Arrow } from './../../svg/arrow-r.svg'
-import { dataWebSolutions, dataTabSolutions, dataAboutSolutions } from './../../components/data'
+import { dataWebSolutions, dataTabSolutions, dataAboutSolutions, dataHomeApplications } from './../../components/data'
 
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,6 +19,9 @@ import rsLogo from '../../illustration/rs.png'
 import bpLogo from '../../illustration/bp.png'
 import psLogo from '../../illustration/ps.png'
 import mainLogo from '../../illustration/aboutLogo.png'
+
+import Statistic from './../../components/Statistic/Statistic'
+import Application from './../../components/Application/Application'
 
 export default function HomePage() {
     const [content, setContent] = useState('dev');
@@ -145,12 +148,20 @@ export default function HomePage() {
                         </Link>
                     </div>
                     <div className="content-company__image">
-                        <img src={mainLogo} alt="nextner - web developer company" />
+                        <img src={mainLogo} alt="Norther - web developer company" />
                     </div>
                 </div>
             </div>
 
-            
+            <div className='wrapper'>
+                < Statistic />
+            </div>
+
+            {
+                dataHomeApplications.map((data, i) => {
+                    return < Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn}/>
+                })
+            }
         </main >
     )
 }

@@ -10,8 +10,8 @@ export default function Prices() {
                 <div className="prices-block">
                     {
                         dataPrices.map((data, i) => {
-                            return <div className="prices-content">
-                                <div key={i} className="prices-content__main">
+                            return <div key={i} className="prices-content">
+                                <div className="prices-content__main">
                                     <div className="prices-content__description">
                                         <h2>{data.title}</h2>
                                         <p>{data.descr}</p>
