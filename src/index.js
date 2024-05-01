@@ -20,7 +20,7 @@ root.render(
     <React.StrictMode>
       <Header />
       <Routes>
-        <Route path='/' element={ <HomePage />} />
+        <Route path='/northen' element={ <HomePage />} />
         <Route path='/privacy' element={ <PrivacyPolicy />} />
         <Route path='/about' element={ <About />} />
         <Route path='/prices' element={ <Prices />} />
