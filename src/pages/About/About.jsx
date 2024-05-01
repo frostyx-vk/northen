@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Statistic from './../../components/Statistic/Statistic'
 import Application from './../../components/Application/Application'
+import Modal from './../../components/Modal/Modal'
 import './About.css'
 import aboutLogo from '../../illustration/aboutLogo.png'
 import { dataSpecialization, dataTechnology, dataAboutApplications } from './../../components/data'
 
 export default function About() {
+    const [modalIsOpenAboutBtn, setModalIsOpenAboutBtn] = useState(false);
+
     return (
         <main className="content">
+            <Modal isOpen={modalIsOpenAboutBtn} onClose={() => (setModalIsOpenAboutBtn(false))} />
             <div className='wrapper'>
                 <div className="about-title">
                     О компании
@@ -50,7 +54,7 @@ export default function About() {
             </div>
             {
                 dataAboutApplications.map((data, i) => {
-                    return <Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} />
+                    return <Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} call={setModalIsOpenAboutBtn}/>
                 })
             }
         </main>

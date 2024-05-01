@@ -1,7 +1,7 @@
 import React from 'react'
 import './Application.css'
 
-export default function Application({ title, descrip, name }) {
+export default function Application({ title, descrip, name, call }) {
     return (
         <div className="content-relation">
             <h2>{title}</h2>
@@ -9,7 +9,7 @@ export default function Application({ title, descrip, name }) {
                 {descrip}
             </p>
             <div className="content-trust__button-block">
-                <div className="content-trust__button">
+                <div className="content-trust__button" onClick={() => call(true)}>
                     <h2 className="content-relation__button_name">{name}</h2>
                     <svg className="content-trust__button-shadowleft" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
                         <path opacity="0.3" fillRule="evenodd" clipRule="evenodd" d="M37.5651 64.1298L64.1304 37.5645L26.5651 0L-0.000236511 26.5645L37.5651 64.1298Z" fill="url(#paint0_linear_0_2560)"></path>
