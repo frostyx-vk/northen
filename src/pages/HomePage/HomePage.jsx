@@ -1,21 +1,24 @@
 import React, { useState } from 'react'
-import './HomePage.css'
+import { Link } from 'react-router-dom'
 import { ReactComponent as Arrow } from './../../svg/arrow-r.svg'
-import { dataWebSolutions, dataTabSolutions } from './../../components/data'
+import { dataWebSolutions, dataTabSolutions, dataAboutSolutions } from './../../components/data'
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useSwiper } from 'swiper/react';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import './HomePage.css'
 
 import rnLogo from '../../illustration/rn.png'
 import gpLogo from '../../illustration/gp.png'
 import rsLogo from '../../illustration/rs.png'
 import bpLogo from '../../illustration/bp.png'
 import psLogo from '../../illustration/ps.png'
+import mainLogo from '../../illustration/aboutLogo.png'
 
 export default function HomePage() {
     const [content, setContent] = useState('dev');
@@ -77,8 +80,6 @@ export default function HomePage() {
                     spaceBetween={50}
                     slidesPerView={2}
                     navigation
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
                     loop={true}
                 >
                     <SwiperSlide>
@@ -128,6 +129,28 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+
+            <div className='wrapper'>
+                <div className="content-company">
+                    <div className="content-company__about">
+                        <h2>{dataAboutSolutions.title}</h2>
+                        <p style={{ textAlign: 'justify' }}>
+                            {dataAboutSolutions.descr}
+                        </p>
+                        <Link to='/about'>
+                            Подробнее о нас
+                            <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path id="Shape" fillRule="evenodd" clipRule="evenodd" d="M0 6.29564L19.6116 6.29564L13.3025 0L15.4032 0L22.4 6.99498L15.4032 14H13.3025L19.6116 7.7L0 7.7L0 6.29564Z" fill="#25B2E7"></path>
+                            </svg>
+                        </Link>
+                    </div>
+                    <div className="content-company__image">
+                        <img src={mainLogo} alt="nextner - web developer company" />
+                    </div>
+                </div>
+            </div>
+
+            
         </main >
     )
 }
