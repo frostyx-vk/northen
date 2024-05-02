@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Modal.css'
 
 export default function Modal({ isOpen, onClose }) {
+    const [toggle, setToggle] = useState(1);
+
+    function updateToggle(id) {
+        setToggle(id);
+    }
+
     const onWrapperClick = (event) => {
-        if(event.target.classList.contains('modal')) onClose();
+        if (event.target.classList.contains('modal')) onClose();
     }
 
     return (
@@ -13,38 +19,44 @@ export default function Modal({ isOpen, onClose }) {
                     <div className="modal" onClick={onWrapperClick}>
                         <div className="modal-wrapper" >
                             <div className="modal-content">
-                                <form method="post" id="feedbackForm">
-                                    <div>
-                                    </div>
+                                <form method="post">
                                     <div className="feedback-title__btns">
-                                        <div></div>
+                                        <div className='feedback-title__btns-block'>
+                                            <div onClick={() => setToggle(1)} className={toggle === 1 ? 'feedback-title__btn-active' : 'feedback-title__btn'}>
+                                                Заказ звонка
+                                            </div>
+                                            <div onClick={() => setToggle(2)} className={toggle === 2 ? 'feedback-title__btn-active' : 'feedback-title__btn'}>
+                                                Заявка
+                                            </div>
+                                        </div>
                                         <span className="modal-close" onClick={() => onClose()}>&times;</span>
                                     </div>
                                     <div className="feedback-callSection">
-                                        <div id="callSection">
+                                        <div className={toggle === 1 ? 'show-content' : 'hidden-content'}>
                                             <div className="messages"></div>
                                             <div className="feedback-callSection__contacts">
                                                 <label>Укажите контактный номер</label>
-                                                <div>
-                                                    phone
-                                                </div>
+                                                <input type="text" />
                                             </div>
                                             <div className="feedback-callSection__time-ring">
                                                 <label >Выберите время для звонка</label>
-                                                input
-                                            </div>
-                                            <div className="feedback-callSection__time-date">
-                                                <div>
-                                                    <div>
-                                                        <label >Время</label>
-                                                    </div>
-                                                    input
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <label >Дата</label>
-                                                    </div>
-                                                    input
+                                                <div className='feedback-callSection__ring-block' id="id_call_time">
+                                                    <label for="id_call_time_0">
+                                                        <input type="radio" name="call_time" value="0" required="" id="id_call_time_0" />
+                                                        Как можно скорее
+                                                    </label>
+                                                    <label for="id_call_time_1">
+                                                        <input type="radio" name="call_time" value="1" required="" id="id_call_time_1" />
+                                                        Через час
+                                                    </label>
+                                                    <label for="id_call_time_2">
+                                                        <input type="radio" name="call_time" value="2" required="" id="id_call_time_2" />
+                                                        Вечером
+                                                    </label>
+                                                    <label for="id_call_time_3">
+                                                        <input type="radio" name="call_time" value="3" required="" id="id_call_time_3" />
+                                                        Завтра
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div className="feedback-callSection__order">
@@ -62,7 +74,7 @@ export default function Modal({ isOpen, onClose }) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="requestSection" hidden>
+                                        <div className={toggle === 2 ? 'show-content' : 'hidden-content'}>
                                             <div className="messages"></div>
                                             <div className="feedback-requestSection__contacts">
                                                 <label >Укажите тип проекта</label>

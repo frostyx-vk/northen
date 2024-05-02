@@ -29,33 +29,15 @@
     cursor: pointer;
 }
 
-.feedback-title__btns {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.show-content {
+    display: block;
 }
 
-.feedback-title__btns #id_form_type {
-    display: flex;
-    border-radius: 30px;
-    background: #526281;
-    box-shadow: 11px 31px 43px 0px rgba(0, 0, 0, 0.37) inset;
-}
-
-.feedback-title__btns #id_form_type {
-    display: inline-block;
-    overflow: hidden;
-}
-
-.feedback-title__btns #id_form_type div {
-    display: inline-block;
-}
-
-.feedback-title__btns #id_form_type div input[type=radio] {
+.hidden-content {
     display: none;
 }
 
-.feedback-title__btns #id_form_type div label {
+.feedback-title__btn {
     display: inline-block;
     padding: 14px 34px;
     line-height: 34px;
@@ -68,8 +50,7 @@
     line-height: 26px;
 }
 
-/* Checked */
-.feedback-title__btns #id_form_type div:nth-child(1) input[type=radio]:checked+label {
+.feedback-title__btn-active {
     background: #FFFFFF;
     border-radius: 30px;
     color: #000;
@@ -78,17 +59,34 @@
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
+    padding: 14px 34px;
 }
 
-.feedback-title__btns #id_form_type div:nth-child(2) input[type=radio]:checked+label {
-    background: #FFFFFF;
+.feedback-title__btns-block {
+    display: flex;
     border-radius: 30px;
-    color: #000;
+    background: #526281;
+    box-shadow: 11px 31px 43px 0px rgba(0, 0, 0, 0.37) inset;
+}
+
+.feedback-callSection__ring-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+    color: #FFF;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 22px;
+    margin-bottom: 24px;
+}
+
+.feedback-title__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .feedback-callSection {
@@ -134,15 +132,8 @@
     cursor: pointer;
 }
 
-.feedback-callSection__time-ring #id_call_time {
-    margin-top: 28px;
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    margin-bottom: 24px;
+.feedback-callSection__time-ring {
+    margin-top: 14px;
 }
 
 .feedback-callSection__time-ring #id_call_time div {
@@ -150,7 +141,7 @@
 }
 
 .feedback-callSection__time-ring #id_call_time input {
-    margin-right: 10px;
+    margin-right: 16px;
 }
 
 .feedback-callSection__time-ring #id_call_time input[type='radio']:after {
@@ -179,37 +170,6 @@
     display: inline-block;
     visibility: visible;
     border: 5px solid white;
-}
-
-.feedback-callSection__time-date {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 38px;
-}
-
-.feedback-callSection__time-date label {
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    opacity: 0.503;
-}
-
-.feedback-callSection__time-date input {
-    width: 180px;
-    height: 48px;
-    color: #FFF;
-    opacity: 0.503;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    background-color: rgba(255, 255, 255, 0.10);
-    border: none;
-    padding: 0 16px;
 }
 
 .feedback-callSection__order {
