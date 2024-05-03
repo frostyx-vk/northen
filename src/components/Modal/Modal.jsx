@@ -1,16 +1,23 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { IMaskInput } from 'react-imask';
 import './Modal.css'
 
 export default function Modal({ isOpen, onClose }) {
     const [toggle, setToggle] = useState(1);
+    const [checked, setChecked] = useState('Как можно скорее');
 
-    function updateToggle(id) {
-        setToggle(id);
-    }
+    const checkItems = ['Как можно скорее', 'Через час', 'Вечером', 'Завтра'];
+
+    function requestCall() {
+        if (IMaskInput.length < 18) {
+            console.log(111)
+        }
+    };
 
     const onWrapperClick = (event) => {
         if (event.target.classList.contains('modal')) onClose();
-    }
+    };
 
     return (
         <>
@@ -33,35 +40,40 @@ export default function Modal({ isOpen, onClose }) {
                                     </div>
                                     <div className="feedback-callSection">
                                         <div className={toggle === 1 ? 'show-content' : 'hidden-content'}>
-                                            <div className="messages"></div>
                                             <div className="feedback-callSection__contacts">
                                                 <label>Укажите контактный номер</label>
-                                                <input type="text" />
+                                                <IMaskInput
+                                                    mask='+7(000)0000000'
+                                                    required
+                                                    type='tel'
+                                                    placeholder='Введите номер'
+                                                    minLength={14}
+                                                    onAccept={
+                                                        (value, mask) => console.log(value.length)
+                                                      }
+                                                />
                                             </div>
                                             <div className="feedback-callSection__time-ring">
                                                 <label >Выберите время для звонка</label>
                                                 <div className='feedback-callSection__ring-block' id="id_call_time">
-                                                    <label for="id_call_time_0">
-                                                        <input type="radio" name="call_time" value="0" required="" id="id_call_time_0" />
-                                                        Как можно скорее
-                                                    </label>
-                                                    <label for="id_call_time_1">
-                                                        <input type="radio" name="call_time" value="1" required="" id="id_call_time_1" />
-                                                        Через час
-                                                    </label>
-                                                    <label for="id_call_time_2">
-                                                        <input type="radio" name="call_time" value="2" required="" id="id_call_time_2" />
-                                                        Вечером
-                                                    </label>
-                                                    <label for="id_call_time_3">
-                                                        <input type="radio" name="call_time" value="3" required="" id="id_call_time_3" />
-                                                        Завтра
-                                                    </label>
+                                                    {
+                                                        checkItems.map((item) => {
+                                                            return <label key={item}>
+                                                                <input
+                                                                    type="radio"
+                                                                    name="call_time"
+                                                                    checked={checked === item}
+                                                                    onChange={() => setChecked(item)}
+                                                                    required />
+                                                                {item}
+                                                            </label>
+                                                        })
+                                                    }
                                                 </div>
                                             </div>
                                             <div className="feedback-callSection__order">
                                                 <div className="content-trust__button">
-                                                    <button type="submit" value="call">
+                                                    <button type="submit" value="call" onClick={() => requestCall()}>
                                                         <h2 className="content-relation__button_name">Заказать звонок</h2>
                                                         <svg className="content-trust__button-svg" width="257" height="61" viewBox="0 0 257 61" fill="none">
                                                             <path fillRule="evenodd" clipRule="evenodd" d="M0 30.5L30.5947 61H226.405H227L226.547 60.8592L257 30.5L226.405 0H30.5947H30L30.4338 0.160393L0 30.5Z" fill="#25B2E7" />
@@ -70,7 +82,10 @@ export default function Modal({ isOpen, onClose }) {
                                                 </div>
                                                 <div className="feedback-callSection__order-agreement">
                                                     Отправляя данные, я даю свое<br />
-                                                    <a href="agreement/">согласие на обработку персональных данных</a>
+                                                    <Link to='/privacy/'>
+                                                        согласие на обработку персональных данных
+                                                    </Link>
+                                                    <a href="agreement/"></a>
                                                 </div>
                                             </div>
                                         </div>

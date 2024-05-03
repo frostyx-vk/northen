@@ -120,6 +120,7 @@
     background-color: rgba(255, 255, 255, 0.10);
     border: none;
     padding: 0 16px;
+    margin-top: 10px;
 }
 
 .feedback-callSection__time-ring label {
@@ -172,6 +173,17 @@
     border: 5px solid white;
 }
 
+.err {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+.err-none {
+    display: none;
+}
+
+
 .feedback-callSection__order {
     display: flex;
     align-items: center;
@@ -191,7 +203,7 @@
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 18px;
+    top: 2px;
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
@@ -476,7 +488,7 @@
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 18px;
+    top: 2px;
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
