@@ -5,6 +5,8 @@ import './Modal.css'
 
 export default function Modal({ isOpen, onClose }) {
     const [toggle, setToggle] = useState(1);
+
+    const [nameValue, setnNameValue] = useState('');
     const [checked, setChecked] = useState('Как можно скорее');
     const [nameDirty, setNameDirty] = useState(false);
     const nameError = 'Введите полностью номер'
@@ -14,7 +16,7 @@ export default function Modal({ isOpen, onClose }) {
     const checkBudget = ['До 1 млн', '1-3 млн', '3-5 млн', 'до 10 млн'];
 
     function requestCall() {
-        if (nameDirty && nameError) {
+        if (!nameDirty && nameValue !== '') {
             console.log('Здесь надо написать код на кнопку отправки формы')
         }
     };
@@ -62,6 +64,9 @@ export default function Modal({ isOpen, onClose }) {
                                                     required
                                                     type='tel'
                                                     placeholder='Введите номер'
+                                                    onAccept={
+                                                        (value, mask) => (setnNameValue(value))
+                                                      }
                                                 />
                                                 {(nameDirty && nameError) && <div className='err'>{nameError}</div>}
                                             </div>
@@ -85,7 +90,7 @@ export default function Modal({ isOpen, onClose }) {
                                             </div>
                                             <div className="feedback-callSection__order">
                                                 <div className="content-trust__button">
-                                                    <button type="button" value="call" onClick={() => requestCall()}>
+                                                    <button type="button" onClick={() => requestCall()}>
                                                         <h2 className="content-relation__button_name">Заказать звонок</h2>
                                                         <svg className="content-trust__button-svg" width="257" height="61" viewBox="0 0 257 61" fill="none">
                                                             <path fillRule="evenodd" clipRule="evenodd" d="M0 30.5L30.5947 61H226.405H227L226.547 60.8592L257 30.5L226.405 0H30.5947H30L30.4338 0.160393L0 30.5Z" fill="#25B2E7" />
