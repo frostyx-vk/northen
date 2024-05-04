@@ -290,6 +290,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 22px !important;
+    margin-right: 10px;
 }
 
 #id_project_type div,
@@ -349,7 +350,7 @@
     line-height: 29px;
 }
 
-#id_description {
+textarea {
     width: 496px;
     height: 160px;
     background-color: rgba(255, 255, 255, 0.10);
@@ -405,7 +406,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 29px;
-    margin-bottom: 32px;
+    margin: 0 0 10px 0;
 }
 
 .feedback-requestSection__data-inputs {

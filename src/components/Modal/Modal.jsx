@@ -62,9 +62,6 @@ export default function Modal({ isOpen, onClose }) {
                                                     required
                                                     type='tel'
                                                     placeholder='Введите номер'
-                                                // onAccept={
-                                                //     (value, mask) => console.log(value.length)
-                                                // }
                                                 />
                                                 {(nameDirty && nameError) && <div className='err'>{nameError}</div>}
                                             </div>
@@ -74,7 +71,7 @@ export default function Modal({ isOpen, onClose }) {
                                                     {
                                                         checkItems.map((item) => {
                                                             return <label key={item} >
-                                                                <input 
+                                                                <input
                                                                     type="radio"
                                                                     name="call_time"
                                                                     checked={checked === item}
@@ -115,7 +112,8 @@ export default function Modal({ isOpen, onClose }) {
                                                                 name="budget"
                                                                 checked={checkedBudjet === item}
                                                                 onChange={() => setCheckedBudjet(item)}
-                                                                required />
+                                                                required
+                                                                />
                                                             {item}
                                                         </label>
                                                     })
@@ -123,25 +121,25 @@ export default function Modal({ isOpen, onClose }) {
                                             </div>
                                             <div className="feedback-requestSection__description">
                                                 <label >Опишите подробнее проект</label>
-                                                <div>
-                                                    input
-                                                </div>
+                                                <textarea
+                                                    name="descrip"
+                                                    cols="40"
+                                                    rows="10"
+                                                    placeholder={'Опишите проект'}
+                                                    minLength={30}
+                                                    required></textarea>
                                             </div>
                                             <div className="feedback-requestSection__data">
-                                                <h3>Контактные данные</h3>
+                                                <h3>Введите контактный номер</h3>
                                                 <div className="feedback-requestSection__data-inputs">
-                                                    <div>
-                                                        input
-                                                    </div>
-                                                    <div>
-                                                        input
-                                                    </div>
-                                                    <div>
-                                                        input
-                                                    </div>
-                                                    <div>
-                                                        input
-                                                    </div>
+                                                    <IMaskInput
+                                                        name='contact'
+                                                        mask='+7(000)0000000'
+                                                        required
+                                                        type='tel'
+                                                        placeholder='Введите номер'
+                                                        minLength={14}
+                                                    />
                                                 </div>
                                             </div>
                                             <div className="feedback-requestSection__order">
