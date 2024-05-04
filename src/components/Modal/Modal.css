@@ -103,10 +103,10 @@
     line-height: 29px;
 }
 
-.feedback-callSection__contacts div {
+/* .feedback-callSection__contacts div {
     margin-top: 18px;
     margin-bottom: 50px;
-}
+} */
 
 .feedback-callSection__contacts input {
     width: 384px;
@@ -176,13 +176,9 @@
 .err {
     display: block;
     color: red;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 4px;
 }
-.err-none {
-    display: none;
-}
-
 
 .feedback-callSection__order {
     display: flex;

@@ -6,14 +6,25 @@ import './Modal.css'
 export default function Modal({ isOpen, onClose }) {
     const [toggle, setToggle] = useState(1);
     const [checked, setChecked] = useState('Как можно скорее');
+    const [nameDirty, setNameDirty] = useState(false);
+    const nameError = 'Введите полностью номер'
 
     const checkItems = ['Как можно скорее', 'Через час', 'Вечером', 'Завтра'];
 
     function requestCall() {
-        if (IMaskInput.length < 18) {
-            console.log(111)
+        if (nameDirty && nameError) {
+            console.log(nameDirty, nameError)
         }
     };
+
+    function bluyHandler(e) {
+        if (e.target.value.length < 14) {
+            setNameDirty(true);
+        } else {
+            setNameDirty(false);
+        }
+
+    }
 
     const onWrapperClick = (event) => {
         if (event.target.classList.contains('modal')) onClose();
@@ -43,15 +54,17 @@ export default function Modal({ isOpen, onClose }) {
                                             <div className="feedback-callSection__contacts">
                                                 <label>Укажите контактный номер</label>
                                                 <IMaskInput
+                                                    onBlur={e => bluyHandler(e)}
+                                                    name='name'
                                                     mask='+7(000)0000000'
                                                     required
                                                     type='tel'
                                                     placeholder='Введите номер'
-                                                    minLength={14}
-                                                    onAccept={
-                                                        (value, mask) => console.log(value.length)
-                                                      }
+                                                    // onAccept={
+                                                    //     (value, mask) => console.log(value.length)
+                                                    // }
                                                 />
+                                                {(nameDirty && nameError) && <div className='err'>{nameError}</div>}
                                             </div>
                                             <div className="feedback-callSection__time-ring">
                                                 <label >Выберите время для звонка</label>
@@ -73,7 +86,7 @@ export default function Modal({ isOpen, onClose }) {
                                             </div>
                                             <div className="feedback-callSection__order">
                                                 <div className="content-trust__button">
-                                                    <button type="submit" value="call" onClick={() => requestCall()}>
+                                                    <button type="button" value="call" onClick={() => requestCall()}>
                                                         <h2 className="content-relation__button_name">Заказать звонок</h2>
                                                         <svg className="content-trust__button-svg" width="257" height="61" viewBox="0 0 257 61" fill="none">
                                                             <path fillRule="evenodd" clipRule="evenodd" d="M0 30.5L30.5947 61H226.405H227L226.547 60.8592L257 30.5L226.405 0H30.5947H30L30.4338 0.160393L0 30.5Z" fill="#25B2E7" />
