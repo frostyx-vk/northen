@@ -26,8 +26,9 @@ export default function Modal({ isOpen, onClose }) {
         }
     };
 
-    function leaceOrder() {
+    function leaceOrder(e) {
         if (nameValueTwo.length === 14 && textarea !== '') {
+            e.preventDefault();
             setToggle(3);
             buttonBlockRef.current.classList.add('feedback-title__btn-none');
         }
@@ -52,7 +53,7 @@ export default function Modal({ isOpen, onClose }) {
                     <div className="modal" onClick={onWrapperClick}>
                         <div className="modal-wrapper" >
                             <div className="modal-content">
-                                <form method="post">
+                                <form >
                                     <div className="feedback-title__btns">
                                         <div className='feedback-title__btns-block' ref={buttonBlockRef}>
                                             <div onClick={() => setToggle(1)} className={(toggle === 1 ? 'feedback-title__btn-active' : 'feedback-title__btn')}>
@@ -72,7 +73,6 @@ export default function Modal({ isOpen, onClose }) {
                                                     onBlur={e => bluyHandler(e)}
                                                     name='name'
                                                     mask='+7(000)0000000'
-                                                    required
                                                     type='tel'
                                                     placeholder='Введите номер'
                                                     onAccept={
@@ -153,6 +153,7 @@ export default function Modal({ isOpen, onClose }) {
                                                         name='contact'
                                                         mask='+7(000)0000000'
                                                         type='tel'
+                                                        required
                                                         placeholder='Введите номер'
                                                         minLength={14}
                                                         onAccept={
@@ -163,7 +164,7 @@ export default function Modal({ isOpen, onClose }) {
                                             </div>
                                             <div className="feedback-requestSection__order">
                                                 <div className="content-trust__button">
-                                                    <button type="submit" onClick={() => leaceOrder()}>
+                                                    <button type="submit" onClick={(e) => leaceOrder(e)}>
                                                         <h2 className="content-relation__button_name">Оставить заявку</h2>
                                                         <svg className="content-trust__button-svg" width="257" height="61" viewBox="0 0 257 61" fill="none">
                                                             <path fillRule="evenodd" clipRule="evenodd" d="M0 30.5L30.5947 61H226.405H227L226.547 60.8592L257 30.5L226.405 0H30.5947H30L30.4338 0.160393L0 30.5Z" fill="#25B2E7" />
