@@ -61,6 +61,9 @@
     line-height: 26px;
     padding: 14px 34px;
 }
+.feedback-title__btn-none {
+    pointer-events: none;
+}
 
 .feedback-title__btns-block {
     display: flex;
@@ -104,7 +107,7 @@
 }
 
 .feedback-callSection__contacts input {
-    width: 384px;
+    width: 496px;
     height: 48px;
     color: #FFF;
     font-family: Montserrat;
@@ -250,7 +253,7 @@
 }
 
 #feedbackApplicationSent {
-    display: none;
+    /* display: none; */
     padding-bottom: 30px;
     font-size: 30px;
 }
@@ -416,7 +419,7 @@ textarea {
 }
 
 .feedback-requestSection__data-inputs input {
-    width: 382px;
+    width: 496px;
     height: 48px;
     color: #FFF;
     font-family: Montserrat;

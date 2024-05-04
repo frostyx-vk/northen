@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { IMaskInput } from 'react-imask';
 import './Modal.css'
@@ -7,17 +7,29 @@ export default function Modal({ isOpen, onClose }) {
     const [toggle, setToggle] = useState(1);
 
     const [nameValue, setnNameValue] = useState('');
+    const [nameValueTwo, setnNameValueTwo] = useState('');
     const [checked, setChecked] = useState('Как можно скорее');
     const [nameDirty, setNameDirty] = useState(false);
+    const [textarea, setTextarea] = useState('');
     const nameError = 'Введите полностью номер'
     const checkItems = ['Как можно скорее', 'Через час', 'Вечером', 'Завтра'];
 
     const [checkedBudjet, setCheckedBudjet] = useState('1-3 млн');
     const checkBudget = ['До 1 млн', '1-3 млн', '3-5 млн', 'до 10 млн'];
 
+    const buttonBlockRef = useRef();
+
     function requestCall() {
         if (!nameDirty && nameValue !== '') {
-            console.log('Здесь надо написать код на кнопку отправки формы')
+            setToggle(3);
+            buttonBlockRef.current.classList.add('feedback-title__btn-none');
+        }
+    };
+
+    function leaceOrder() {
+        if (nameValueTwo.length === 14 && textarea !== '') {
+            setToggle(3);
+            buttonBlockRef.current.classList.add('feedback-title__btn-none');
         }
     };
 
@@ -26,9 +38,8 @@ export default function Modal({ isOpen, onClose }) {
             setNameDirty(true);
         } else {
             setNameDirty(false);
-        }
-
-    }
+        };
+    };
 
     const onWrapperClick = (event) => {
         if (event.target.classList.contains('modal')) onClose();
@@ -43,8 +54,8 @@ export default function Modal({ isOpen, onClose }) {
                             <div className="modal-content">
                                 <form method="post">
                                     <div className="feedback-title__btns">
-                                        <div className='feedback-title__btns-block'>
-                                            <div onClick={() => setToggle(1)} className={toggle === 1 ? 'feedback-title__btn-active' : 'feedback-title__btn'}>
+                                        <div className='feedback-title__btns-block' ref={buttonBlockRef}>
+                                            <div onClick={() => setToggle(1)} className={(toggle === 1 ? 'feedback-title__btn-active' : 'feedback-title__btn')}>
                                                 Заказ звонка
                                             </div>
                                             <div onClick={() => setToggle(2)} className={toggle === 2 ? 'feedback-title__btn-active' : 'feedback-title__btn'}>
@@ -66,7 +77,7 @@ export default function Modal({ isOpen, onClose }) {
                                                     placeholder='Введите номер'
                                                     onAccept={
                                                         (value, mask) => (setnNameValue(value))
-                                                      }
+                                                    }
                                                 />
                                                 {(nameDirty && nameError) && <div className='err'>{nameError}</div>}
                                             </div>
@@ -118,7 +129,7 @@ export default function Modal({ isOpen, onClose }) {
                                                                 checked={checkedBudjet === item}
                                                                 onChange={() => setCheckedBudjet(item)}
                                                                 required
-                                                                />
+                                                            />
                                                             {item}
                                                         </label>
                                                     })
@@ -127,6 +138,7 @@ export default function Modal({ isOpen, onClose }) {
                                             <div className="feedback-requestSection__description">
                                                 <label >Опишите подробнее проект</label>
                                                 <textarea
+                                                    onChange={(e) => setTextarea(e.target.value)}
                                                     name="descrip"
                                                     cols="40"
                                                     rows="10"
@@ -144,12 +156,15 @@ export default function Modal({ isOpen, onClose }) {
                                                         type='tel'
                                                         placeholder='Введите номер'
                                                         minLength={14}
+                                                        onAccept={
+                                                            (value, mask) => (setnNameValueTwo(value))
+                                                        }
                                                     />
                                                 </div>
                                             </div>
                                             <div className="feedback-requestSection__order">
                                                 <div className="content-trust__button">
-                                                    <button id="submit__trust-form" type="submit" value="call">
+                                                    <button type="button" onClick={() => leaceOrder()}>
                                                         <h2 className="content-relation__button_name">Оставить заявку</h2>
                                                         <svg className="content-trust__button-svg" width="257" height="61" viewBox="0 0 257 61" fill="none">
                                                             <path fillRule="evenodd" clipRule="evenodd" d="M0 30.5L30.5947 61H226.405H227L226.547 60.8592L257 30.5L226.405 0H30.5947H30L30.4338 0.160393L0 30.5Z" fill="#25B2E7" />
@@ -158,11 +173,13 @@ export default function Modal({ isOpen, onClose }) {
                                                 </div>
                                                 <div className="feedback-callSection__order-agreement">
                                                     Отправляя данные, я даю свое<br />
-                                                    <a href="agreement/">согласие на обработку персональных данных</a>
+                                                    <Link to='/privacy/'>
+                                                        согласие на обработку персональных данных
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="feedbackApplicationSent">
+                                        <div className={toggle === 3 ? 'show-content' : 'hidden-content'} id="feedbackApplicationSent">
                                             <h3>Заявка отправлена!</h3>
                                         </div>
                                         <div className="feedback__contact-block">
