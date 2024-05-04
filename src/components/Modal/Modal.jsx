@@ -152,7 +152,6 @@ export default function Modal({ isOpen, onClose }) {
                                                     <IMaskInput
                                                         name='contact'
                                                         mask='+7(000)0000000'
-                                                        required
                                                         type='tel'
                                                         placeholder='Введите номер'
                                                         minLength={14}
@@ -164,7 +163,7 @@ export default function Modal({ isOpen, onClose }) {
                                             </div>
                                             <div className="feedback-requestSection__order">
                                                 <div className="content-trust__button">
-                                                    <button type="button" onClick={() => leaceOrder()}>
+                                                    <button type="submit" onClick={() => leaceOrder()}>
                                                         <h2 className="content-relation__button_name">Оставить заявку</h2>
                                                         <svg className="content-trust__button-svg" width="257" height="61" viewBox="0 0 257 61" fill="none">
                                                             <path fillRule="evenodd" clipRule="evenodd" d="M0 30.5L30.5947 61H226.405H227L226.547 60.8592L257 30.5L226.405 0H30.5947H30L30.4338 0.160393L0 30.5Z" fill="#25B2E7" />
