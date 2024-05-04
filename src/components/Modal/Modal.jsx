@@ -13,7 +13,7 @@ export default function Modal({ isOpen, onClose }) {
 
     function requestCall() {
         if (nameDirty && nameError) {
-            console.log(nameDirty, nameError)
+            console.log('Здесь надо написать код на кнопку отправки формы')
         }
     };
 
