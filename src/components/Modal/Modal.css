@@ -103,11 +103,6 @@
     line-height: 29px;
 }
 
-/* .feedback-callSection__contacts div {
-    margin-top: 18px;
-    margin-bottom: 50px;
-} */
-
 .feedback-callSection__contacts input {
     width: 384px;
     height: 48px;
@@ -284,15 +279,14 @@
 
 #id_budget {
     margin-top: 34px;
-    display: flex;
     gap: 20px;
 }
 
 #id_project_type label,
-#id_budget label {
+#id_budget label, .feedback-requestSection__budjet p {
     color: #FFF;
     font-family: Montserrat;
-    font-size: 16px !important;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px !important;
@@ -305,7 +299,7 @@
 
 #id_project_type input,
 #id_budget input {
-    margin-right: 10px;
+    margin-right: 13px;
 }
 
 #id_project_type input[type='radio']:after,
@@ -368,36 +362,6 @@
     font-weight: 400;
     line-height: 22px;
     resize: none;
-}
-
-.feedback-requestSection__attach {
-    margin-top: 28px;
-}
-
-#attachmentFile {
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-#attachmentFile a {
-    color: black;
-    background-color: white;
-    opacity: 0.7;
-    border-radius: 50%;
-    text-decoration: none;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #id_file {
