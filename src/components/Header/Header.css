@@ -113,20 +113,6 @@
 }
 
 @media (max-width: 768px) {
-    .modal-content {
-        right: 0;
-        top: 0;
-        position: static;
-        padding: 0;
-        width: 100%;
-    }
-
-    .modal-content form {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
     .feedback-callSection {
         padding-left: 0;
     }
@@ -134,22 +120,12 @@
     .modal-content .content-trust__button-svg {
         display: block;
     }
-
-    .feedback-callSection__order {
-        flex-direction: column;
-        align-items: start;
-    }
 }
 
 @media (max-width: 600px) {
     #id_project_type {
         display: flex;
         flex-direction: column;
-    }
-
-    #id_budget {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
     }
 
     #id_description,
@@ -162,9 +138,9 @@
         width: 100%;
     }
 
-    .feedback-requestSection__order {
+    .feedback-callSection__order {
         flex-direction: column;
-        align-items: start;
+        align-items: start !important;
     }
 }
 

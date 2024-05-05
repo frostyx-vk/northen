@@ -477,55 +477,43 @@ textarea {
 }
 
 @media (max-width: 768px) {
-    .feedback-callSection {
-        padding-left: 0;
-    }
-
-    .modal-content .content-trust__button-svg {
-        display: block;
-    }
-
-    .feedback-callSection__order {
-        flex-direction: column;
-        align-items: start;
-    }
-}
-
-@media (max-width: 600px) {
-    #id_project_type {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #id_budget {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #id_description,
-    .feedback-requestSection__data-inputs input {
-        width: 100%;
+    .modal-wrapper {
+        right: 0;
+        top: 0;
+        position: static;
         padding: 0;
+        width: 100%;
+        height: 100%;
     }
 
-    #id_description {
-        width: 100%;
+    .modal-content form {
+        padding: 20px;
     }
 
     .feedback-requestSection__order {
         flex-direction: column;
-        align-items: start;
+        align-items: start !important;
     }
-}
 
-@media (max-width: 480px) {
-    .feedback-callSection__time-date {
+    .feedback-callSection__contacts input {
+        width: 300px;
+    }
+
+    .feedback-requestSection__budjet {
+        display: flex;
         flex-direction: column;
     }
 
-    .feedback-callSection__time-date input,
-    .feedback-callSection__contacts input {
-        width: 100%;
-        padding: 0;
+    .feedback-requestSection__description textarea, .feedback-requestSection__data-inputs input {
+        width: 300px;
+    }
+
+    .feedback-requestSection__description, .feedback-callSection__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feedback-callSection {
+        padding-left: 10px;
     }
 }
