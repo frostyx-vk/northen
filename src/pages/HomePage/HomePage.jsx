@@ -87,6 +87,14 @@ export default function HomePage() {
                     slidesPerView={2}
                     navigation
                     loop={true}
+                    breakpoints={{
+                        200: {
+                          slidesPerView: 1,
+                        },
+                        768: {
+                          slidesPerView: 2,
+                        },
+                      }}
                 >
                     <SwiperSlide>
                         <img src={rnLogo} alt="image" width={300} />
