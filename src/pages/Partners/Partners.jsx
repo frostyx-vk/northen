@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Partners.css'
 import { dataParthners, dataParthnersApplications } from './../../components/data'
 import Application from './../../components/Application/Application'
+import Modal from './../../components/Modal/Modal'
 
 export default function Partners() {
+    const [modalIsOpenOrderBtn, setmodalIsOpenOrderBtn] = useState(false);
+
     return (
         <main className="content">
+            <Modal isOpen={modalIsOpenOrderBtn} onClose={() => (setmodalIsOpenOrderBtn(false))} />
             <div className="wrapper">
                 <h1>Патнерство с Northen</h1>
                 {
@@ -24,7 +28,7 @@ export default function Partners() {
             </div>
             {
                 dataParthnersApplications.map((data, i) => {
-                    return <Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} />
+                    return <Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} call={setmodalIsOpenOrderBtn}/>
                 })
             }
         </main>

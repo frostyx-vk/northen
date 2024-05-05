@@ -108,3 +108,18 @@
         font-size: 26px;
     }
 }
+
+@media (max-width: 800px) {
+    .contacts__content-block {
+        flex-direction: column;
+    }
+    .contacts__content-block iframe {
+        width: 100%;
+    }
+    .contacts__title {
+        margin-bottom: 0;
+    }
+    .contacts__title h1 {
+        margin: 0;
+    }
+}

@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
-import Nav from '../Nav/Nav'
 import { ReactComponent as PhoneIcon } from '../../svg/phone.svg'
 import { ReactComponent as TelegramIcon } from '../../svg/telegram.svg'
 import logo from '../../illustration/logo.png'
-
+import Nav from '../Nav/Nav'
+import Modal from '../Modal/Modal'
 
 export default function Header() {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -35,10 +36,12 @@ export default function Header() {
             </div>
             <Nav />
             <div className={'header__order'}>
-                <button className={'header-modalbtn'}>
+                <button className={'header-modalbtn'} onClick={() => setModalIsOpen(true)}>
                     Заказать<br />
                     проект
                 </button>
+
+                <Modal isOpen={modalIsOpen} onClose={() => (setModalIsOpen(false))}/>
             </div>
         </div>
     )

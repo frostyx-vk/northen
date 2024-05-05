@@ -1,0 +1,519 @@
+.modal {
+    position: fixed;
+    z-index: 21;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgb(0, 0, 0, 0.8);
+    overflow: hidden;
+    overflow-y: auto;
+    transition: opacity 0.3s;
+}
+
+.modal-wrapper {
+    right: 20px;
+    top: 20px;
+    position: absolute;
+    z-index: 10;
+    padding: 50px;
+    border-radius: 10px;
+    background: #233b59;
+    box-shadow: 0px 0px 24px 0px rgba(37, 178, 231, 0.79);
+    width: 578px;
+}
+
+.modal-close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.show-content {
+    display: block;
+}
+
+.hidden-content {
+    display: none;
+}
+
+.feedback-title__btn {
+    display: inline-block;
+    padding: 14px 34px;
+    line-height: 34px;
+    cursor: pointer;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.feedback-title__btn-active {
+    background: #FFFFFF;
+    border-radius: 30px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 14px 34px;
+}
+.feedback-title__btn-none {
+    pointer-events: none;
+}
+
+.feedback-title__btns-block {
+    display: flex;
+    border-radius: 30px;
+    background: #526281;
+    box-shadow: 11px 31px 43px 0px rgba(0, 0, 0, 0.37) inset;
+}
+
+.feedback-callSection__ring-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 24px;
+}
+
+.feedback-title__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feedback-callSection {
+    margin-top: 54px;
+    padding-left: 40px;
+}
+
+.feedback-callSection__contacts label {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.feedback-callSection__contacts input {
+    width: 496px;
+    height: 48px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    background-color: rgba(255, 255, 255, 0.10);
+    border: none;
+    padding: 0 16px;
+    margin-top: 10px;
+}
+
+.feedback-callSection__time-ring label {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    cursor: pointer;
+}
+
+.feedback-callSection__time-ring {
+    margin-top: 14px;
+}
+
+.feedback-callSection__time-ring #id_call_time div {
+    margin-bottom: 10px;
+}
+
+.feedback-callSection__time-ring #id_call_time input {
+    margin-right: 16px;
+}
+
+.feedback-callSection__time-ring #id_call_time input[type='radio']:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -4px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 5px solid white;
+}
+
+.feedback-callSection__time-ring #id_call_time input[type='radio']:checked:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -4px;
+    left: -1px;
+    position: relative;
+    background-color: #FF0008;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 5px solid white;
+}
+
+.err {
+    display: block;
+    color: red;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.feedback-callSection__order {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-bottom: 52px;
+}
+
+.feedback-callSection__order button {
+    background: none;
+    border: none;
+    border-radius: 50%;
+}
+
+.feedback-callSection__order .content-trust__button h2 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 2px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.feedback-callSection__order-agreement,
+.feedback-callSection__order-agreement a {
+    opacity: 0.503;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.feedback-callSection__order-agreement a {
+    text-decoration-line: underline;
+}
+
+.feedback-callSection__ring-you {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 30px;
+}
+
+.feedback-callSection__contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.feedback-callSection__contact a {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#feedbackApplicationSent {
+    /* display: none; */
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.feedback-requestSection__contacts label,
+.feedback-requestSection__budjet label {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+#id_project_type {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#id_budget {
+    margin-top: 34px;
+    gap: 20px;
+}
+
+#id_project_type label,
+#id_budget label, .feedback-requestSection__budjet p {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px !important;
+    margin-right: 10px;
+}
+
+#id_project_type div,
+#id_budget div {
+    margin-bottom: 10px;
+}
+
+#id_project_type input,
+#id_budget input {
+    margin-right: 13px;
+}
+
+#id_project_type input[type='radio']:after,
+#id_budget input[type='radio']:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -4px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 5px solid white;
+}
+
+#id_project_type input[type='radio']:checked:after,
+#id_budget input[type='radio']:checked:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -4px;
+    left: -1px;
+    position: relative;
+    background-color: #FF0008;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 5px solid white;
+}
+
+.feedback-requestSection__budjet {
+    margin-top: 40px;
+}
+
+.feedback-requestSection__description {
+    margin-top: 44px;
+}
+
+.feedback-requestSection__description label {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+textarea {
+    width: 496px;
+    height: 160px;
+    background-color: rgba(255, 255, 255, 0.10);
+    margin-top: 16px;
+    padding: 16px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    resize: none;
+}
+
+#id_file {
+    display: block !important;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#id_file+label {
+    width: 496px;
+    height: 48px;
+    border: 2px dashed rgba(255, 255, 255, 0.38);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feedback-requestSection__attach label {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+}
+
+.feedback-requestSection__data {
+    margin-top: 40px;
+}
+
+.feedback-requestSection__data h3 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    margin: 0 0 10px 0;
+}
+
+.feedback-requestSection__data-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.feedback-requestSection__data-inputs input {
+    width: 496px;
+    height: 48px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    background-color: rgba(255, 255, 255, 0.10);
+    border: none;
+    padding: 0 16px;
+}
+
+.feedback-requestSection__order {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-bottom: 52px;
+    margin-top: 40px;
+}
+
+.feedback-requestSection__order button {
+    background: none;
+    border: none;
+    border-radius: 50%;
+}
+
+.feedback-requestSection__order button h2 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 2px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+#languageForm .ss-main {
+    background: transparent;
+    color: #fff;
+    border: none;
+    width: 44px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media (max-width: 768px) {
+    .modal-wrapper {
+        right: 0;
+        top: 0;
+        position: static;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-content form {
+        padding: 20px;
+    }
+
+    .feedback-requestSection__order {
+        flex-direction: column;
+        align-items: start !important;
+    }
+
+    .feedback-callSection__contacts input {
+        width: 300px;
+    }
+
+    .feedback-requestSection__budjet {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feedback-requestSection__description textarea, .feedback-requestSection__data-inputs input {
+        width: 300px;
+    }
+
+    .feedback-requestSection__description, .feedback-callSection__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feedback-callSection {
+        padding-left: 10px;
+    }
+}

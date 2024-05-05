@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Contacts.css'
 import Application from './../../components/Application/Application'
+import Modal from './../../components/Modal/Modal'
 import { dataContactsApplications } from './../../components/data'
 
 export default function Contacts() {
+    const [modalIsOpenContansBtn, setModalIsOpenContansBtn] = useState(false);
+
     return (
         <main className="content">
+            <Modal isOpen={modalIsOpenContansBtn} onClose={() => (setModalIsOpenContansBtn(false))} />
             <div className="wrapper">
                 <div className="contacts__block">
                     <div className="contacts__title">
@@ -43,7 +47,7 @@ export default function Contacts() {
             </div>
             {
                 dataContactsApplications.map((data, i) => {
-                    return <Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} />
+                    return <Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} call={setModalIsOpenContansBtn}/>
                 })
             }
         </main>

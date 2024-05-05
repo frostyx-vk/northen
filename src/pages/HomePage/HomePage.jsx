@@ -22,9 +22,11 @@ import mainLogo from '../../illustration/aboutLogo.png'
 
 import Statistic from './../../components/Statistic/Statistic'
 import Application from './../../components/Application/Application'
+import Modal from './../../components/Modal/Modal'
 
 export default function HomePage() {
     const [content, setContent] = useState('dev');
+    const [modalIsOpenClientBtn, setModalIsOpenClientBtn] = useState(false);
 
     const swiper = useSwiper();
 
@@ -34,6 +36,7 @@ export default function HomePage() {
 
     return (
         <main className="content">
+            <Modal isOpen={modalIsOpenClientBtn} onClose={() => (setModalIsOpenClientBtn(false))}/>
             <div className="wrapper">
                 <div className="content-solution__right-block">
                     <div className="content-solution__web-block">
@@ -84,6 +87,14 @@ export default function HomePage() {
                     slidesPerView={2}
                     navigation
                     loop={true}
+                    breakpoints={{
+                        200: {
+                          slidesPerView: 1,
+                        },
+                        768: {
+                          slidesPerView: 2,
+                        },
+                      }}
                 >
                     <SwiperSlide>
                         <img src={rnLogo} alt="image" width={300} />
@@ -103,7 +114,7 @@ export default function HomePage() {
 
                 </Swiper>
                 <div className="content-trust__button-block">
-                    <div className="content-trust__button">
+                    <div className="content-trust__button" onClick={() => setModalIsOpenClientBtn(true)}>
                         <h2 className="content-relation__button_name">Стать Клиентом</h2>
                         <svg className="content-trust__button-shadowleft" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
                             <path opacity="0.3" fillRule="evenodd" clipRule="evenodd" d="M37.5651 64.1298L64.1304 37.5645L26.5651 0L-0.000236511 26.5645L37.5651 64.1298Z" fill="url(#paint0_linear_0_2560)"></path>
@@ -159,7 +170,7 @@ export default function HomePage() {
 
             {
                 dataHomeApplications.map((data, i) => {
-                    return < Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn}/>
+                    return < Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} call={setModalIsOpenClientBtn}/>
                 })
             }
         </main >
