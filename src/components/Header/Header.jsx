@@ -11,7 +11,7 @@ export default function Header() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className='header-block'>
             <div className={'header__contacts'}>
                 <div className={'header__contacts-logo'}>
                     <Link to='/northen'>
@@ -31,7 +31,6 @@ export default function Header() {
                             t.me/northen
                         </a>
                     </div>
-                    <button className={'header__contacts-btn'}>Переключить режим</button>
                 </div>
             </div>
             <Nav />
@@ -41,7 +40,10 @@ export default function Header() {
                     проект
                 </button>
 
-                <Modal isOpen={modalIsOpen} onClose={() => (setModalIsOpen(false))}/>
+                <Modal isOpen={modalIsOpen} onClose={() => (setModalIsOpen(false))} />
+            </div>
+            <div class="burger">
+                <span></span>
             </div>
         </div>
     )

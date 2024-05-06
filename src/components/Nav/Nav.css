@@ -11,3 +11,9 @@
 .header__nav-list a:hover {
     color: #23a6ff;
 }
+
+@media (max-width: 1280px) {
+    .nav-block {
+        display: none;
+    }
+}
