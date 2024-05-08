@@ -4,10 +4,12 @@
     list-style: none;
     margin: 0;
 }
+
 .header__nav-list a {
     color: #fff;
     font-family: Montserrat;
 }
+
 .header__nav-list a:hover {
     color: #23a6ff;
 }
