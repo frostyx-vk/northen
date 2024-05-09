@@ -82,7 +82,7 @@
     cursor: pointer;
 }
 
-.content-relation__button_name{
+.content-relation__button_name {
     color: #FFF !important;
     text-align: center !important;
     font-family: Montserrat !important;
@@ -92,7 +92,7 @@
     line-height: normal !important;
 }
 
-.content-trust__button-shadowright{
+.content-trust__button-shadowright {
     position: absolute;
     bottom: -2px;
     right: -34px;
