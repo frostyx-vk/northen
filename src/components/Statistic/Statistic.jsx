@@ -22,11 +22,11 @@ export default function Statistic() {
                 </div>
             </div>
             <div className={"content-statistics__right"}>
-                <div className={"content-statistics__company-info"} style={{marginTop: '26px'}}>
+                <div className={"content-statistics__company-info"} style={{ marginTop: '26px' }}>
                     <div className={"content-statistics__company-number"}>3</div>
                     <div className={"content-statistics__company-text"}>
                         года
-                        средний срок работы<br/>с клиентом
+                        средний срок работы<br />с клиентом
                     </div>
                 </div>
             </div>
