@@ -51,10 +51,20 @@ export default function About() {
                         }
                     </div>
                 </div>
+                <div className="about-technology">
+                    <h3>О нашей профессии</h3>
+                    <div className="about-video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-cKePJ1ArLI?si=RcmwGbOtsKXhV-8n"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
             {
                 dataAboutApplications.map((data, i) => {
-                    return <Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} call={setModalIsOpenAboutBtn}/>
+                    return <Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} call={setModalIsOpenAboutBtn} />
                 })
             }
         </main>

@@ -104,6 +104,11 @@
     margin-top: 16px;
 }
 
+.about-video {
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .about-title {
         font-size: 30px;
