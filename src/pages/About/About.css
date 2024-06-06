@@ -65,7 +65,8 @@
     font-family: Montserrat, sans-serif;
 }
 
-.about-technology h3, .about-specialization__block h3 {
+.about-technology h3,
+.about-specialization__block h3 {
     color: #FFF;
     font-family: Montserrat;
     font-size: 30px;
@@ -103,6 +104,11 @@
     margin-top: 16px;
 }
 
+.about-video {
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .about-title {
         font-size: 30px;
@@ -110,7 +116,8 @@
         margin-left: 0;
     }
 
-    .about-technology h3, .about-specialization__block h3 {
+    .about-technology h3,
+    .about-specialization__block h3 {
         margin: 0;
         margin-bottom: 20px;
     }
@@ -118,14 +125,17 @@
     .about-specialization__item {
         width: 100%;
     }
+
     .about-technology__items {
         margin: 0;
         width: 100%;
         align-items: center;
     }
+
     .content-trust__button-block {
         width: 100%;
     }
+
     .about-title__img img {
         width: 100%;
     }

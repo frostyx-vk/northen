@@ -61,6 +61,7 @@
     line-height: 26px;
     padding: 14px 34px;
 }
+
 .feedback-title__btn-none {
     pointer-events: none;
 }
@@ -286,7 +287,8 @@
 }
 
 #id_project_type label,
-#id_budget label, .feedback-requestSection__budjet p {
+#id_budget label,
+.feedback-requestSection__budjet p {
     color: #FFF;
     font-family: Montserrat;
     font-size: 20px;
@@ -483,7 +485,7 @@ textarea {
         position: static;
         padding: 0;
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
     }
 
     .modal-content form {
@@ -504,11 +506,13 @@ textarea {
         flex-direction: column;
     }
 
-    .feedback-requestSection__description textarea, .feedback-requestSection__data-inputs input {
+    .feedback-requestSection__description textarea,
+    .feedback-requestSection__data-inputs input {
         width: 300px;
     }
 
-    .feedback-requestSection__description, .feedback-callSection__contacts {
+    .feedback-requestSection__description,
+    .feedback-callSection__contacts {
         display: flex;
         flex-direction: column;
     }
