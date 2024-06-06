@@ -42,7 +42,7 @@ export default function Header() {
 
                 <Modal isOpen={modalIsOpen} onClose={() => (setModalIsOpen(false))} />
             </div>
-            <div class="burger">
+            <div className="burger">
                 <span></span>
             </div>
         </div>
