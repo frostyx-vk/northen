@@ -14,7 +14,7 @@ export default function About() {
             <Modal isOpen={modalIsOpenAboutBtn} onClose={() => (setModalIsOpenAboutBtn(false))} />
             <div className='wrapper'>
                 <div className="about-title">
-                    О компании
+                    <h2>О компании</h2>
                 </div>
                 <div className="about-title__img">
                     <img src={aboutLogo} alt="nothen - web developer company" />

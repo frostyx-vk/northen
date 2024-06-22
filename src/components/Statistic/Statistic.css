@@ -95,3 +95,8 @@
         margin-top: 96px;   
     }
 }
+@media (max-width: 480px) {
+    .content-statistics__left, .content-statistics__middle, .content-statistics__right {
+        width: auto;
+    }
+}
