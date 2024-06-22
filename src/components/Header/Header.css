@@ -190,6 +190,12 @@
     background-color: #25B2E7;
 }
 
+.burger-close {
+    color: #25B2E7;
+    font-size: 34px;
+    margin-right: 34px;
+}
+
 .burger::before,
 .burger::after {
     content: '';
@@ -223,7 +229,6 @@
 }
 
 .burger-menu {
-    display: none;
     flex-direction: column;
     position: fixed;
     height: 100%;
@@ -231,9 +236,18 @@
     top: 0;
     left: 0;
     z-index: 9;
-    background: #1A2124;
+    background: #2e4e5b;
     margin-top: 87px;
     animation: animationBurger 0.4s;
+}
+
+.burger__nav-list a {
+    color: #fff;
+    font-family: Montserrat;
+    padding: 10px 0 10px 0px;
+}
+.burger__nav-list a:first-child {
+    padding-top: 20px !important;
 }
 
 .burger-menu.open {
