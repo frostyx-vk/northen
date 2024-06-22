@@ -1,4 +1,4 @@
-.about-title {
+.about-title h2 {
     color: #FFF;
     font-family: Montserrat;
     font-size: 56px;
@@ -110,16 +110,22 @@
 }
 
 @media (max-width: 768px) {
-    .about-title {
+    .about-title h2 {
         font-size: 30px;
-        width: 100%;
+        width: auto;
         margin-left: 0;
+        padding: 0 10px;
+    }
+
+    .about-video iframe {
+        padding: 0 10px;
     }
 
     .about-technology h3,
     .about-specialization__block h3 {
         margin: 0;
         margin-bottom: 20px;
+        padding: 0 10px;
     }
 
     .about-specialization__item {
@@ -138,5 +144,9 @@
 
     .about-title__img img {
         width: 100%;
+    }
+
+    .about-specialization__items {
+        padding: 0 10px;
     }
 }

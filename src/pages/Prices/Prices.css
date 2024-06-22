@@ -124,7 +124,15 @@
         padding-right: 0;
     }
 
+    .wrapper-prices h1 {
+        padding: 0 10px;
+    }
+
     .prices-title {
         font-size: 30px;
+    }
+
+    .prices-block {
+        padding: 0 10px;
     }
 }
