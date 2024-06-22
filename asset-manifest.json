@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/northen/static/css/main.9f894368.css",
-    "main.js": "/northen/static/js/main.2c1ae629.js",
+    "main.css": "/northen/static/css/main.a9953051.css",
+    "main.js": "/northen/static/js/main.8146c697.js",
     "static/js/453.7953f966.chunk.js": "/northen/static/js/453.7953f966.chunk.js",
     "static/media/rs.png": "/northen/static/media/rs.666d1a75fbdc5f342e77.png",
     "static/media/ps.png": "/northen/static/media/ps.5b2b523e7b7a5cc8fe28.png",
@@ -26,12 +26,12 @@
     "index.html": "/northen/index.html",
     "static/media/telegram.svg": "/northen/static/media/telegram.a31600fd401412348753d63d183b92a4.svg",
     "static/media/arrow-r.svg": "/northen/static/media/arrow-r.8a7408203bc20987eb555a0ac9081aa2.svg",
-    "main.9f894368.css.map": "/northen/static/css/main.9f894368.css.map",
-    "main.2c1ae629.js.map": "/northen/static/js/main.2c1ae629.js.map",
+    "main.a9953051.css.map": "/northen/static/css/main.a9953051.css.map",
+    "main.8146c697.js.map": "/northen/static/js/main.8146c697.js.map",
     "453.7953f966.chunk.js.map": "/northen/static/js/453.7953f966.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f894368.css",
-    "static/js/main.2c1ae629.js"
+    "static/css/main.a9953051.css",
+    "static/js/main.8146c697.js"
   ]
 }
