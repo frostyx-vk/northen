@@ -10,7 +10,7 @@ export default function Nav() {
                     О нас
                 </Link>
                 <Link to='/prices'>
-                    Цены
+                    Услуги
                 </Link>
                 <Link to='/partners'>
                     Партнёрам

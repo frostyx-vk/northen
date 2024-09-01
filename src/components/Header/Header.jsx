@@ -85,7 +85,7 @@ export default function Header() {
                                 О нас
                             </Link>
                             <Link to='/prices' onClick={handlerMenu}>
-                                Цены
+                                Услуги
                             </Link>
                             <Link to='/partners' onClick={handlerMenu}>
                                 Партнёрам
