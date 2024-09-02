@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { IMaskInput } from 'react-imask';
+import { createOrderPhone, createOrderOnline } from '../../api/index'
 import './Modal.css'
 
 export default function Modal({ isOpen, onClose }) {
@@ -23,6 +24,20 @@ export default function Modal({ isOpen, onClose }) {
         if (!nameDirty && nameValue !== '') {
             setToggle(3);
             buttonBlockRef.current.classList.add('feedback-title__btn-none');
+            let userFormData = new FormData();
+            let convenientTime;
+            if (checked === 'Как можно скорее') {
+                convenientTime = 'QUICKLY';
+            } else if (checked === 'Через час') {
+                convenientTime = 'IN_HOUR';
+            } else if (checked === 'Вечером') {
+                convenientTime = 'EVENING';
+            } else {
+                convenientTime = 'TOMORROW';
+            }
+            userFormData.append('user_phone', nameValue);
+            userFormData.append('convenient_time', convenientTime);
+            createOrderPhone(userFormData);
         }
     };
 
@@ -31,6 +46,21 @@ export default function Modal({ isOpen, onClose }) {
             e.preventDefault();
             setToggle(3);
             buttonBlockRef.current.classList.add('feedback-title__btn-none');
+            let userFormData = new FormData();
+            let budget;
+            if (checkedBudjet === 'До 1 млн') {
+                budget = 'ONE_MILLION';
+            } else if (checkedBudjet === '1-3 млн') {
+                budget = 'ONE_THREE';
+            } else  if (checkedBudjet === '3-5 млн') {
+                budget = 'THREE_FIVE';
+            } else {
+                budget = 'TEN_MILLION';
+            }
+            userFormData.append('description', textarea);
+            userFormData.append('user_phone', nameValueTwo);
+            userFormData.append('budget', budget);
+            createOrderOnline(userFormData);
         }
     };
 
@@ -45,7 +75,6 @@ export default function Modal({ isOpen, onClose }) {
     const onWrapperClick = (event) => {
         if (event.target.classList.contains('modal')) onClose();
     };
-
     return (
         <>
             {
