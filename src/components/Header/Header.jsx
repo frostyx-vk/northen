@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
+import { contactList } from '../../api/index'
 import { ReactComponent as PhoneIcon } from '../../svg/phone.svg'
 import { ReactComponent as TelegramIcon } from '../../svg/telegram.svg'
 import logo from '../../illustration/logo.png'
@@ -24,7 +25,6 @@ export default function Header() {
             };
         };
     });
-
     return (
         <div className='header-block'>
             <div className={'header__contacts'}>
@@ -37,13 +37,13 @@ export default function Header() {
                     <div className={'header__contacts-tel'}>
                         <a href="tel:+79233206666">
                             <PhoneIcon />
-                            +7 (923) 320-6666
+                            {contactList[0].phone}
                         </a>
                     </div>
                     <div className={'header__contacts-telegram'}>
                         <a href="https://t.me/fro_styx" className={'contact'}>
                             <TelegramIcon />
-                            t.me/northen
+                            {contactList[0].telegram}
                         </a>
                     </div>
                 </div>
