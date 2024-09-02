@@ -4,7 +4,8 @@ import Application from './../../components/Application/Application'
 import Modal from './../../components/Modal/Modal'
 import './About.css'
 import aboutLogo from '../../illustration/aboutLogo.png'
-import { dataSpecialization, dataTechnology, dataAboutApplications } from './../../components/data'
+import { dataAboutApplications } from './../../components/data'
+import { specilaizationList, technologyList } from '../../api/index'
 
 export default function About() {
     const [modalIsOpenAboutBtn, setModalIsOpenAboutBtn] = useState(false);
@@ -24,17 +25,19 @@ export default function About() {
                     <div className="about-specialization__block">
                         <h3>Наша специализация</h3>
                         <div className="about-specialization__items">
-                            {dataSpecialization.map((data, index) => {
-                                return <div key={index} className="about-specialization__item">
-                                    <div className="about-specialization__item-title">
-                                        <p>{data.title}</p>
-                                        <img src={data.img} alt="image" />
+                            {
+                                specilaizationList.map((data, index) => {
+                                    return <div key={index} className="about-specialization__item">
+                                        <div className="about-specialization__item-title">
+                                            <p>{data.name}</p>
+                                            <img src={data.image} alt="image"/>
+                                        </div>
+                                        <div className="about-specialization__item-description">
+                                            <p>{data.description}</p>
+                                        </div>
                                     </div>
-                                    <div className="about-specialization__item-description">
-                                        <p>{data.description}</p>
-                                    </div>
-                                </div>
-                            })}
+                                })
+                            }
                         </div>
                     </div>
                 </div>
@@ -42,10 +45,10 @@ export default function About() {
                     <h3>Наши технологии</h3>
                     <div className="about-technology__items">
                         {
-                            dataTechnology.map((data, i) => {
+                            technologyList.map((data, i) => {
                                 return <div key={i} className="about-technology__item">
-                                    <img src={data.img} alt="image" width={120} height={120} />
-                                    <p>{data.title}</p>
+                                    <img src={data.image} alt="image" width={120} height={120} />
+                                    <p>{data.name}</p>
                                 </div>
                             })
                         }
