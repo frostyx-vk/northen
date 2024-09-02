@@ -1,4 +1,6 @@
-// 1) dataPrices добавлено в админ панель, удалить после зполнения базы
+// Добавлено в админ панель, удалить после заполнения базы
+// 1) dataPrices
+// 2) dataParthners
 
 
 export const dataPrivacy = [

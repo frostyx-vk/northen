@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Partners.css'
-import { dataParthners, dataParthnersApplications } from './../../components/data'
+import { dataParthnersApplications } from './../../components/data'
+import { advantageList } from '../../api/index'
 import Application from './../../components/Application/Application'
 import Modal from './../../components/Modal/Modal'
 
@@ -13,14 +14,14 @@ export default function Partners() {
             <div className="wrapper">
                 <h1>Патнерство с Northen</h1>
                 {
-                    dataParthners.map((item, i) => {
+                    advantageList.map((item, i) => {
                         return <div key={i} className="parthners-block">
                             <div>
-                                <img src={item.img} width={150} alt="image" />
+                                <img src={item.image} width={150} alt="image" />
                             </div>
                             <div className="parthners-description">
                                 <h2>{item.title}</h2>
-                                <p>{item.descr}</p>
+                                <p>{item.text}</p>
                             </div>
                         </div>
                     })
