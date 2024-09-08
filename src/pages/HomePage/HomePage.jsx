@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ReactComponent as Arrow } from './../../svg/arrow-r.svg'
 import { dataWebSolutions, dataTabSolutions, dataAboutSolutions, dataHomeApplications } from './../../components/data'
-
+import {partnerList} from '../../api/index'
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useSwiper } from 'swiper/react';
@@ -13,11 +13,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './HomePage.css'
 
-import rnLogo from '../../illustration/rn.png'
-import gpLogo from '../../illustration/gp.png'
-import rsLogo from '../../illustration/rs.png'
-import bpLogo from '../../illustration/bp.png'
-import psLogo from '../../illustration/ps.png'
 import mainLogo from '../../illustration/aboutLogo.png'
 
 import Statistic from './../../components/Statistic/Statistic'
@@ -33,6 +28,8 @@ export default function HomePage() {
     function handleClick(type) {
         setContent(type);
     };
+
+
 
     return (
         <main className="content">
@@ -95,23 +92,13 @@ export default function HomePage() {
                           slidesPerView: 2,
                         },
                       }}
-                >
-                    <SwiperSlide>
-                        <img src={rnLogo} alt="image" width={300} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={gpLogo} alt="image" width={300} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={rsLogo} alt="image" width={300} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={bpLogo} alt="image" width={300} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={psLogo} alt="image" width={300} />
-                    </SwiperSlide>
-
+                >{
+                    partnerList.map((data) => {
+                        return <SwiperSlide>
+                            <img src={data.image} alt="image" width={300}/>
+                        </SwiperSlide>
+                    })
+                }
                 </Swiper>
                 <div className="content-trust__button-block">
                     <div className="content-trust__button" onClick={() => setModalIsOpenClientBtn(true)}>

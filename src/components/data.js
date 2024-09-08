@@ -1,3 +1,9 @@
+// Добавлено в админ панель, удалить после заполнения базы
+// 1) dataPrices
+// 2) dataParthners
+// 3) dataSpecialization
+// 4) dataTechnology
+
 export const dataPrivacy = [
     {
         title: 'Политика в отношении обработки персональных данных',
