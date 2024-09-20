@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { IMaskInput } from 'react-imask';
-import {createOrderPhone, createOrderOnline, contactList} from '../../api/index'
+import { createOrderPhone, createOrderOnline, contactList } from '../../api/index'
 import './Modal.css'
 
 export default function Modal({ isOpen, onClose }) {
@@ -52,7 +52,7 @@ export default function Modal({ isOpen, onClose }) {
                 budget = 'ONE_MILLION';
             } else if (checkedBudjet === '1-3 млн') {
                 budget = 'ONE_THREE';
-            } else  if (checkedBudjet === '3-5 млн') {
+            } else if (checkedBudjet === '3-5 млн') {
                 budget = 'THREE_FIVE';
             } else {
                 budget = 'TEN_MILLION';
@@ -85,6 +85,7 @@ export default function Modal({ isOpen, onClose }) {
         contactEmail = contactList[0].email;
         contactTelegram = contactList[0].telegram
     }
+
 
     return (
         <>

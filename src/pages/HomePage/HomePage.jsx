@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ReactComponent as Arrow } from './../../svg/arrow-r.svg'
 import { dataWebSolutions, dataTabSolutions, dataAboutSolutions, dataHomeApplications } from './../../components/data'
-import {partnerList} from '../../api/index'
+import { partnerList } from '../../api/index'
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useSwiper } from 'swiper/react';
@@ -29,11 +29,9 @@ export default function HomePage() {
         setContent(type);
     };
 
-
-
     return (
         <main className="content">
-            <Modal isOpen={modalIsOpenClientBtn} onClose={() => (setModalIsOpenClientBtn(false))}/>
+            <Modal isOpen={modalIsOpenClientBtn} onClose={() => (setModalIsOpenClientBtn(false))} />
             <div className="wrapper">
                 <div className="content-solution__right-block">
                     <div className="content-solution__web-block">
@@ -86,19 +84,19 @@ export default function HomePage() {
                     loop={true}
                     breakpoints={{
                         200: {
-                          slidesPerView: 1,
+                            slidesPerView: 1,
                         },
                         768: {
-                          slidesPerView: 2,
+                            slidesPerView: 2,
                         },
-                      }}
+                    }}
                 >{
-                    partnerList.map((data) => {
-                        return <SwiperSlide>
-                            <img src={data.image} alt="image" width={300}/>
-                        </SwiperSlide>
-                    })
-                }
+                        partnerList.map((data, i) => {
+                            return <SwiperSlide key={i}>
+                                <img src={data.image} alt="image" width={300} />
+                            </SwiperSlide>
+                        })
+                    }
                 </Swiper>
                 <div className="content-trust__button-block">
                     <div className="content-trust__button" onClick={() => setModalIsOpenClientBtn(true)}>
@@ -157,7 +155,7 @@ export default function HomePage() {
 
             {
                 dataHomeApplications.map((data, i) => {
-                    return < Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} call={setModalIsOpenClientBtn}/>
+                    return < Application key={i} title={data.title} descrip={data.descr} name={data.nameBtn} call={setModalIsOpenClientBtn} />
                 })
             }
         </main >

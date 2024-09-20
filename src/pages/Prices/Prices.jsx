@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { serviceList } from '../../api/index'
 import './Prices.css'
 import Modal from './../../components/Modal/Modal'
 
 export default function Prices() {
     const [modalIsOpenPricesBtn, setModalIsOpenPricesBtn] = useState(false);
+
     return (
         <main className="content">
             <Modal isOpen={modalIsOpenPricesBtn} onClose={() => (setModalIsOpenPricesBtn(false))} />
@@ -12,7 +13,7 @@ export default function Prices() {
                 <h1 className="prices-title">Услуги</h1>
                 <div className="prices-block">
                     {
-                        serviceList.map((data, i) => {
+                        serviceList && serviceList.map((data, i) => {
                             return <div key={i} className="prices-content">
                                 <div className="prices-content__main">
                                     <div className="prices-content__description">
