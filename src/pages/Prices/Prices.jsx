@@ -3,6 +3,7 @@ import { serviceList } from '../../api/index'
 import './Prices.css'
 import Modal from './../../components/Modal/Modal'
 
+
 export default function Prices() {
     const [modalIsOpenPricesBtn, setModalIsOpenPricesBtn] = useState(false);
 

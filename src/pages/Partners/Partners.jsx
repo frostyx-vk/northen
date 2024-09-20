@@ -14,7 +14,7 @@ export default function Partners() {
             <div className="wrapper">
                 <h1>Патнерство с Northen</h1>
                 {
-                    advantageList.map((item, i) => {
+                    advantageList && advantageList.map((item, i) => {
                         return <div key={i} className="parthners-block">
                             <div>
                                 <img src={item.image} width={150} alt="image" />
