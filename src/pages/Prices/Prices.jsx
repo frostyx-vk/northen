@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { serviceList } from '../../api/index'
 import './Prices.css'
 import Modal from './../../components/Modal/Modal'
