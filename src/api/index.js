@@ -20,9 +20,18 @@ export const contactList = await axios.get(`${serverBaseUrl}${CONTACT_LIST}`).th
 export const specilaizationList = await axios.get(`${serverBaseUrl}${SPECIALIZATIONS_LIST}`).then(res => res.data);
 export const technologyList = await axios.get(`${serverBaseUrl}${TECHNOLOGY_LIST}`).then(res => res.data);
 export const partnerList = await axios.get(`${serverBaseUrl}${PARTNERS_LIST}`).then(res => res.data);
-export function createOrderPhone(userData) {
-    return axios.post(`${serverBaseUrl}${CREATE_ORDER_PHONE}`, userData)
+
+export async function createOrderPhone(userData) {
+    try {
+        return await axios.post(`${serverBaseUrl}${CREATE_ORDER_PHONE}`, userData);
+    } catch (e) {
+        return console.log(e);
+    }
 }
-export function createOrderOnline(userData) {
-    return axios.post(`${serverBaseUrl}${CREATE_ORDER_ONLINE}`, userData)
+export async function createOrderOnline(userData) {
+    try {
+        return await axios.post(`${serverBaseUrl}${CREATE_ORDER_ONLINE}`, userData);
+    } catch (e) {
+        return console.log(e);
+    }
 }

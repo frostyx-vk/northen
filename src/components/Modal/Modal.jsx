@@ -22,7 +22,6 @@ export default function Modal({ isOpen, onClose }) {
 
     function requestCall() {
         if (!nameDirty && nameValue !== '') {
-            setToggle(3);
             buttonBlockRef.current.classList.add('feedback-title__btn-none');
             let userFormData = new FormData();
             let convenientTime;
@@ -37,7 +36,9 @@ export default function Modal({ isOpen, onClose }) {
             }
             userFormData.append('user_phone', nameValue);
             userFormData.append('convenient_time', convenientTime);
+
             createOrderPhone(userFormData);
+            setToggle(3);
         }
     };
 
@@ -60,11 +61,12 @@ export default function Modal({ isOpen, onClose }) {
             userFormData.append('description', textarea);
             userFormData.append('user_phone', nameValueTwo);
             userFormData.append('budget', budget);
+            
             createOrderOnline(userFormData);
         }
     };
 
-    function bluyHandler(e) {
+    function blyuHandler(e) {
         if (e.target.value.length < 14) {
             setNameDirty(true);
         } else {
@@ -111,7 +113,7 @@ export default function Modal({ isOpen, onClose }) {
                                             <div className="feedback-callSection__contacts">
                                                 <label>Укажите контактный номер</label>
                                                 <IMaskInput
-                                                    onBlur={e => bluyHandler(e)}
+                                                    onBlur={e => blyuHandler(e)}
                                                     name='name'
                                                     mask='+7(000)0000000'
                                                     type='tel'
