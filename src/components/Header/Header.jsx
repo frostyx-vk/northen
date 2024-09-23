@@ -45,13 +45,13 @@ export default function Header() {
                 </div>
                 <div className={'header__contacts-block'}>
                     <div className={'header__contacts-tel'}>
-                        <a href={contactPhone}>
+                        <a href={`tel: ${contactPhone}`}>
                             <PhoneIcon />
                             {contactPhone}
                         </a>
                     </div>
                     <div className={'header__contacts-telegram'}>
-                        <a href={contactTelegram} className={'contact'}>
+                        <a href={`https://${contactTelegram}`} target="_blank" className={'contact'}>
                             <TelegramIcon />
                             {contactTelegram}
                         </a>
