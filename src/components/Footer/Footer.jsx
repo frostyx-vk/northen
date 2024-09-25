@@ -8,15 +8,15 @@ import { contactList } from '../../api/index'
 export default function Footer() {
   const [modalIsOpenFooterBtn, setModalIsOpenFooterBtn] = useState(false);
 
-  let contactPhone = '';
-    let contactEmail = '';
-    let contactTelegram = '';
+  let contactPhone = null;
+  let contactEmail = null;
+  let contactTelegram = null;
 
-    if (contactList.length > 0) {
-        contactPhone = contactList[0].phone;
-        contactEmail = contactList[0].email;
-        contactTelegram = contactList[0].telegram
-    }
+  if (contactList.length > 0) {
+    contactPhone = contactList[0].phone.trim();
+    contactEmail = contactList[0].email.trim();
+    contactTelegram = contactList[0].telegram.trim();
+  }
 
   return (
     <div className='footer'>
