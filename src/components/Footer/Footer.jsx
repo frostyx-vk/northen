@@ -51,7 +51,7 @@ export default function Footer() {
           </a>
           <div className={"footer-content__order-contacts"} itemScope="" itemType="https://schema.org/Organization">
             <div>
-              <a href={contact.email} className={"contact"} itemProp="email">
+              <a href={`mailto:${contact.email}`} className={"contact"} itemProp="email">
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none">
                   <path fillRule="evenodd" clipRule="evenodd" d="M20 2L18 0L16 2L14 0L12 2L10 0L8 2L6 0L4 2L2 0L0 2L2 4L0 6L2 8L0 10L2 12L0 14L2 16L4 14L6 16L8 14L10 16L12 14L14 16L16 14L18 16L20 14L18 12L20 10L18 8L20 6L18 4L20 2ZM10 11L4 6V4L10 8L16 4V6L10 11Z" fill="#25B2E7"></path>
                 </svg>
