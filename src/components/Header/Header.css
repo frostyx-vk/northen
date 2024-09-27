@@ -194,6 +194,7 @@
     color: #25B2E7;
     font-size: 34px;
     margin-right: 34px;
+    cursor: pointer;
 }
 
 .burger::before,

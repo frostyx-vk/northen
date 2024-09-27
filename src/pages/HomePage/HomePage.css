@@ -195,6 +195,7 @@
     .content-solution__right-block {
         flex-direction: column;
         gap: 50px;
+        padding: 0 10px;
     }
 
     .swiper-slide img {
