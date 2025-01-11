@@ -23,7 +23,7 @@ export default function Contacts() {
                                 contactList && contactList.map((data, i) => {
                                     return <div className="contacts__office" key={i}>
                                         <h2>{data.address.city}</h2>
-                                        <div>
+                                        <div className='contacts__office-adres'>
                                             <svg width="14" height="20" viewBox="0 0 14 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path id="Shape" fillRule="evenodd" clipRule="evenodd"

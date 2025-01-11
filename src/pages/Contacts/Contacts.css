@@ -33,6 +33,10 @@
     margin-bottom: 10px;
 }
 
+.contacts__office-adres svg {
+    margin-right: 12px;
+}
+
 .contacts__office h2 {
     color: #FFF;
     font-family: Montserrat;
