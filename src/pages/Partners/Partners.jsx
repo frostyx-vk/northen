@@ -12,7 +12,7 @@ export default function Partners() {
         <main className="content">
             <Modal isOpen={modalIsOpenOrderBtn} onClose={() => (setmodalIsOpenOrderBtn(false))} />
             <div className="wrapper">
-                <h1>Патнерство с Northen</h1>
+                <h1>Преимущества работы с Northen</h1>
                 {
                     advantageList && advantageList.map((item, i) => {
                         return <div key={i} className="parthners-block">

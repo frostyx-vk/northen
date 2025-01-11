@@ -19,7 +19,7 @@ export default function Contacts() {
                     </div>
                     <div className="contacts__content-block">
                         <div className="contacts__content">
-                            {   
+                            {
                                 contactList && contactList.map((data, i) => {
                                     return <div className="contacts__office" key={i}>
                                         <h2>{data.address.city}</h2>
@@ -56,9 +56,10 @@ export default function Contacts() {
                                 })
                             }
                         </div>
-                        <iframe
+                        {/* <iframe
                             src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f144daf1f0f945f92a855cb2eb1a4d45d2c28e4a1af4cd135591ce3940b3856&amp;source=constructor"
-                            width="656" height="400" frameBorder="0"></iframe>
+                            width="656" height="400" frameBorder="0">
+                        </iframe> */}
                     </div>
                 </div>
             </div>
